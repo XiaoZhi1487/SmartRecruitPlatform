@@ -3,7 +3,7 @@ from datetime import datetime
 
 from app.extensions import db
 from app.models.interaction import SiteStructureCheck
-from app.services.crawler.anti_detect import create_driver
+from app.services.crawler.anti_detect import create_driver, close_driver
 from app.utils.logger import get_logger
 
 logger = get_logger()
@@ -21,7 +21,11 @@ def check_structure(app, check_url=None, selectors=None, detail_selectors=None):
 
     driver = None
     try:
-        driver = create_driver(headless=cfg["CRAWL_HEADLESS"])
+        driver = create_driver(headless=cfg["CRAWL_HEADLESS"],
+                               engine=cfg["CRAWL_BROWSER"],
+                               browser_path=cfg["CRAWL_BROWSER_PATH"],
+                               driver_path=cfg["CRAWL_DRIVER_PATH"],
+                               attach_port=cfg.get("CRAWL_ATTACH_PORT", 0))
         driver.get(url)
         import time as _t
         _t.sleep(4)
@@ -49,11 +53,7 @@ def check_structure(app, check_url=None, selectors=None, detail_selectors=None):
         logger.error("结构监测失败: %s", e)
         _record(app, "list", "_network", url, "error", str(e)[:500])
     finally:
-        if driver:
-            try:
-                driver.quit()
-            except Exception:
-                pass
+        close_driver(driver)
 
     changed = [r for r in results if r["status"] not in ("ok",)]
     summary = {

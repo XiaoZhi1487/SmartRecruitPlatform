@@ -42,7 +42,7 @@ def _salary():
 
 
 def _make_link(kw, idx):
-    return f"https://www.zhipin.com/job_detail/{kw}-mock-{idx}.html"
+    return f"https://jobs.51job.com/beijing/mock-{kw}-{idx}.html"
 
 
 def generate_jobs(keyword, pages=3, city=None) -> list:
@@ -63,7 +63,7 @@ def generate_jobs(keyword, pages=3, city=None) -> list:
             tags = [s for s in skills] + r.sample(["五险一金", "弹性工作", "年终奖", "带薪年假"], k=2)
             company = f"{r.choice(['星云', '云启', '智汇', '灵犀', '知行', '启明', '蓝图', '极光'])}{r.choice(COMPANY_SUFFIX)}"
             items.append({
-                "boss_job_id": f"mock-{keyword}-{idx}",
+                "source_job_id": f"mock-{keyword}-{idx}",
                 "title": title,
                 "salary_text": f"{s_min}-{s_max}K",
                 "city": c,

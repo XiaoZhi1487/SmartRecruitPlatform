@@ -56,10 +56,14 @@ class DeepSeekService:
     def available(self) -> bool:
         return bool(self.api_key)
 
-    def _request(self, messages, temperature=0.7, max_tokens=2000):
+    def _request(self, messages, temperature=0.7, max_tokens=2000, system_key="chat"):
         """发起请求并实现指数退避重试"""
         if not self.available:
             raise RuntimeError("DeepSeek API Key 未配置")
+
+        # 注入系统提示词
+        system_prompt = SYSTEM_PROMPTS.get(system_key, SYSTEM_PROMPTS["chat"])
+        messages = [{"role": "system", "content": system_prompt}] + list(messages)
 
         url = f"{self.base_url}/chat/completions"
         headers = {
@@ -102,13 +106,12 @@ class DeepSeekService:
     # ---------- 业务能力 ----------
     def chat(self, history, system_key="chat"):
         """多轮对话。history: [{"role","content"}, ...]"""
-        messages = [{"role": "system", "content": SYSTEM_PROMPTS.get(system_key, SYSTEM_PROMPTS["chat"])}]
-        messages += history[-20:]  # 限制上下文长度
-        return self._request(messages)
+        return self._request(history[-20:], system_key=system_key)  # 限制上下文长度
 
-    def _json_request(self, messages, temperature=0.3, max_tokens=1500):
+    def _json_request(self, messages, temperature=0.3, max_tokens=1500, system_key="chat"):
         """请求并尽力解析 JSON，失败时返回空 dict"""
-        content = self._request(messages, temperature=temperature, max_tokens=max_tokens)
+        content = self._request(messages, temperature=temperature,
+                                max_tokens=max_tokens, system_key=system_key)
         return _extract_json(content)
 
     def optimize_resume(self, resume_text, job_title=None):

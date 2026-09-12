@@ -20,13 +20,19 @@ def start_crawl():
     if not keywords:
         return fail("请至少填写一个爬取关键字")
     city = data.get("city") or ""
+    if not city:
+        return fail("请选择要爬取的城市")
     pages = int(data.get("pages") or 3)
     threads = int(data.get("threads") or crawl_manager.app.config["CRAWL_THREADS"])
     mode = data.get("mode") or crawl_manager.app.config["CRAWL_MODE"]
     if mode not in ("real", "mock", "auto"):
         mode = "auto"
+    # 是否显示浏览器窗口（None 表示跟随配置 CRAWL_HEADLESS）
+    headless = data.get("headless")
+    if headless is not None:
+        headless = str(headless).lower() in ("1", "true", "yes", "on")
     try:
-        task_id = crawl_manager.start(keywords, city, pages, threads, mode)
+        task_id = crawl_manager.start(keywords, city, pages, threads, mode, headless)
         return ok({"task_id": task_id}, "爬取任务已启动")
     except RuntimeError as e:
         return fail(str(e), http_status=409)

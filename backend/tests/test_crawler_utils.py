@@ -22,16 +22,18 @@ def test_heuristic_extract():
 
 
 def test_parse_salary():
-    from app.services.crawler.boss_crawler import parse_salary
+    from app.services.crawler.job51_crawler import parse_salary
     assert parse_salary("20-30K") == (20, 30)
+    assert parse_salary("1.2-2.3万/月") == (12, 23)
+    assert parse_salary("4-8千/月") == (4, 8)
     assert parse_salary("15K以上") in ((15, 15), (15, None))
     assert parse_salary("面议") == (None, None)
 
 
 def test_extract_job_id():
-    from app.services.crawler.boss_crawler import extract_job_id
-    url = "https://www.zhipin.com/job_detail/abc123def.html?ka=search"
-    assert extract_job_id(url) == "abc123def"
+    from app.services.crawler.job51_crawler import extract_job_id
+    url = "https://jobs.51job.com/beijing-cyq/143341820.html?s=pchome_joblist"
+    assert extract_job_id(url) == "143341820"
 
 
 def test_proxy_pool():

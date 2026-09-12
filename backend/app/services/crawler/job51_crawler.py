@@ -1,4 +1,4 @@
-"""Boss直聘页面解析与数据入库（含去重与增量更新）"""
+"""前程无忧(51job)页面解析与数据入库（含去重与增量更新）"""
 import json
 import re
 
@@ -10,12 +10,49 @@ from app.utils.logger import get_logger
 
 logger = get_logger()
 
-SALARY_PATTERN = re.compile(r"(\d+)\s*[-~]\s*(\d+)K")
+
+def _parse_sensorsdata(card):
+    """从卡片 sensorsdata 属性解析字段（PC 版含完整职位信息，结构稳定）"""
+    data = {}
+    try:
+        sensor = card.get_attribute("sensorsdata") or ""
+        if not sensor:
+            # sensorsdata 属性位于卡片内层 .joblist-item-job 元素上，需向下查找
+            els = card.find_elements("css selector", "[sensorsdata]")
+            sensor = els[0].get_attribute("sensorsdata") if els else ""
+        sensor = sensor.replace("&quot;", '"').replace("&amp;", "&")
+        m = re.search(r'\{.*\}', sensor)
+        if m:
+            obj = json.loads(m.group(0))
+            for k in ("jobId", "jobTitle", "jobSalary", "jobArea", "jobYear",
+                      "jobDegree", "companyId"):
+                if obj.get(k):
+                    data[k] = str(obj[k]).strip()
+    except Exception:
+        pass
+    return data
 
 
 def extract_job_card(card, selectors) -> dict:
-    """从单个职位卡片 li 中提取字段（容错：单个字段失败不影响整体）"""
+    """从单个职位卡片中提取字段。
+
+    PC 版卡片结构（.joblist-item）：
+      <div class="joblist-item">
+        <div class="joblist-item-job" sensorsdata='{"jobId":"173487969","jobTitle":"...",
+             "jobSalary":"5-8千","jobArea":"柳州·城中区","jobYear":"1年及以上",
+             "jobDegree":"本科","companyId":"10464649"}' ...>
+          <div class="joblist-item-jobname"><span class="jname">职位名</span></div>
+          <div class="joblist-item-jobinfo"><span class="sal">薪资</span></div>
+          <div class="joblist-item-tags"><span class="tag">经验</span><span class="tag">学历</span></div>
+          <div class="joblist-item-left">... <div class="area">城市·区</div></div>
+          <div class="joblist-item-right"><span class="cname">公司名</span> ...</div>
+        </div>
+      </div>
+
+    字段优先取自 sensorsdata 属性（结构稳定），CSS 选择器兜底。
+    """
     item = {"title": "", "salary_text": "", "city": "", "district": "",
+            "experience_required": "", "education_required": "",
             "job_tags": [], "company_name": "", "company_tags": [], "link": ""}
 
     def _text(css, default=""):
@@ -31,42 +68,60 @@ def extract_job_card(card, selectors) -> dict:
         except Exception:
             return []
 
-    item["title"] = _text(selectors["job_title"])
-    item["salary_text"] = _text(selectors["salary"])
-    # 地点：“北京朝阳区”
-    area = _text(selectors["job_area"])
+    sensor = _parse_sensorsdata(card)
+    item["title"] = sensor.get("jobTitle") or _text(selectors["job_title"])
+    item["salary_text"] = sensor.get("jobSalary") or _text(selectors["salary"])
+    # 地点：前程无忧格式 "柳州·城中区" / "上海-浦东新区"
+    area = sensor.get("jobArea") or _text(selectors["job_area"])
     if area:
-        item["city"] = area[:2] if len(area) >= 2 else area
-        item["district"] = area[2:] if len(area) > 2 else ""
-    item["job_tags"] = _texts(selectors["job_tags"])
+        parts = re.split(r"[·\-|]", area)
+        item["city"] = parts[0].strip() if parts else area
+        item["district"] = parts[1].strip() if len(parts) > 1 else ""
+    item["experience_required"] = sensor.get("jobYear") or ""
+    item["education_required"] = sensor.get("jobDegree") or ""
+    # 标签（福利/技能）与公司标签
+    tags = _texts(selectors["job_tags"])
+    if tags:
+        item["job_tags"] = tags
     item["company_name"] = _text(selectors["company"])
     item["company_tags"] = _texts(selectors["company_tags"])
-    try:
-        link_el = card.find_element("css selector", selectors["job_link"])
-        href = link_el.get_attribute("href") or ""
-        if href and "/job_detail/" in href:
-            item["link"] = href if href.startswith("http") else "https://www.zhipin.com" + href
-    except Exception:
-        pass
+
+    # 职位ID与详情链接：优先 sensorsdata 的 jobId；详情用 msearch 服务端渲染页（免验证码）
+    job_id = sensor.get("jobId")
+    if job_id:
+        item["source_job_id"] = job_id
+        item["link"] = f"https://msearch.51job.com/jobs/all/{job_id}.html"
     return item
 
 
 def extract_job_id(link: str) -> str:
-    """从链接中提取 boss_job_id 用于去重"""
-    m = re.search(r"/job_detail/([\w\-]+)\.html", link or "")
+    """从链接中提取站点职位ID用于去重（如 msearch.51job.com/jobs/xian-xxxq/173605258.html）"""
+    m = re.search(r"/([\w\-]+)\.html", link or "")
     return m.group(1) if m else None
 
 
 def parse_salary(text: str) -> tuple:
-    """解析薪资文本为 (min_k, max_k)"""
-    m = SALARY_PATTERN.search(text or "")
+    """解析薪资文本为 (min_k, max_k)，单位统一为 K/月。
+    支持：20-30K、1.2-2.3万/月、4-8千/月、15K以上、面议
+    """
+    text = (text or "").replace("·", " ").strip()
+    if not text:
+        return None, None
+    # 区间格式：数字 - 数字 [万|千]
+    m = re.search(r"([\d.]+)\s*[-~]\s*([\d.]+)\s*(万|千)?", text)
     if m:
-        return int(m.group(1)), int(m.group(2))
-    nums = re.findall(r"\d+", text or "")
+        lo, hi, unit = float(m.group(1)), float(m.group(2)), m.group(3) or ""
+        if unit == "万":       # 1.2-2.3万/月 → 12-23K
+            lo, hi = lo * 10, hi * 10
+        elif unit == "千":     # 4-8千/月 → 4-8K
+            pass
+        return int(lo), int(hi)
+    nums = re.findall(r"\d+\.?\d*", text)
     if len(nums) >= 2:
-        return int(nums[0]), int(nums[1])
+        return int(float(nums[0])), int(float(nums[1]))
     if len(nums) == 1:
-        return int(nums[0]), int(nums[0])
+        n = int(float(nums[0]))
+        return n, n
     return None, None
 
 
@@ -97,16 +152,16 @@ def fetch_job_detail(driver, link: str, detail_selectors, timeout=12):
 
 
 def save_jobs(app, items, source="crawler") -> int:
-    """批量入库：按 boss_job_id 去重；已存在则增量更新"""
+    """批量入库：按 source_job_id 去重；已存在则增量更新"""
     saved = 0
     with app.app_context():
         for it in items:
-            boss_id = it.get("boss_job_id") or extract_job_id(it.get("link", ""))
-            if not boss_id:
-                boss_id = f"{it.get('title')}-{it.get('company_name')}-{it.get('salary_text')}-{it.get('link','')}"
+            source_id = it.get("source_job_id") or extract_job_id(it.get("link", ""))
+            if not source_id:
+                source_id = f"{it.get('title')}-{it.get('company_name')}-{it.get('salary_text')}-{it.get('link','')}"
             salary_min, salary_max = parse_salary(it.get("salary_text"))
 
-            job = Job.query.filter_by(boss_job_id=boss_id).first() if boss_id else None
+            job = Job.query.filter_by(source_job_id=source_id).first() if source_id else None
             company = None
             if it.get("company_name"):
                 company = Company.query.filter_by(name=it["company_name"]).first()
@@ -131,18 +186,26 @@ def save_jobs(app, items, source="crawler") -> int:
                     job.title = it["title"]
                 if it.get("job_tags"):
                     job.job_tags = json.dumps(tags, ensure_ascii=False)
+                if it.get("experience_required"):
+                    job.experience_required = it["experience_required"]
+                if it.get("education_required"):
+                    job.education_required = it["education_required"]
                 if it.get("description") and not job.description:
                     job.description = it["description"]
+                if company and not job.company_id:
+                    job.company_id = company.id
                 job.is_active = True
             else:
                 job = Job(
-                    boss_job_id=boss_id,
+                    source_job_id=source_id,
                     title=it.get("title") or "未知职位",
                     salary_text=it.get("salary_text"),
                     salary_min=salary_min,
                     salary_max=salary_max,
                     city=it.get("city"),
                     district=it.get("district"),
+                    experience_required=it.get("experience_required"),
+                    education_required=it.get("education_required"),
                     job_tags=json.dumps(tags, ensure_ascii=False) if tags else None,
                     company_name=it.get("company_name"),
                     company_id=it.get("company_id"),

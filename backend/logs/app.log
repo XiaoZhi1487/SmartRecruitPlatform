@@ -1,1103 +1,339 @@
-2026-09-10 17:30:12,368 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:12,545 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:12,615 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:12,616 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:12,802 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=alice@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImFsaWNlQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ4pA.nHI6nRHapvjyF1y4el3T6NXxZQ0" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:12,802 [INFO] job_ai:96 - 新用户注册: alice2026 (alice@test.com)
-2026-09-10 17:30:13,052 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:13,230 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:13,294 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:13,294 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:13,543 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:13,721 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:13,785 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:13,785 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:13,964 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=carol@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImNhcm9sQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ4pQ.QH8ktiFg1yGmbMNjJBYOjBeunB4" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:13,964 [INFO] job_ai:96 - 新用户注册: carol2026 (carol@test.com)
-2026-09-10 17:30:14,214 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:14,402 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:14,476 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:14,476 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:14,652 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=dave@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImRhdmVAdGVzdC5jb20iLCJwdXJwb3NlIjoidmVyaWZ5In0.aqJ4pg.sOfDx0dV5OcbiMddCnvPZWHb020" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:14,653 [INFO] job_ai:96 - 新用户注册: dave2026 (dave@test.com)
-2026-09-10 17:30:14,834 [INFO] job_ai:134 - 用户登录: dave2026
-2026-09-10 17:30:15,091 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:15,268 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:15,333 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:15,333 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:15,511 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=eve@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImV2ZUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ4pw.NYkDsu0WCguGP0tZveJ2MpdodwI" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:15,511 [INFO] job_ai:96 - 新用户注册: eve2026 (eve@test.com)
-2026-09-10 17:30:15,938 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:16,146 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:16,208 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:16,208 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:16,387 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=frank@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImZyYW5rQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ4qA.ggp0ez_oMgJtZMl5CAmxZtQrygk" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:16,387 [INFO] job_ai:96 - 新用户注册: frank2026 (frank@test.com)
-2026-09-10 17:30:17,287 [WARNING] job_ai:127 - 账号 frank2026 连续失败被锁定
-2026-09-10 17:30:17,542 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:17,719 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:17,781 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:17,781 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:18,034 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:18,211 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:18,269 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:18,271 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:18,448 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ4qg.bY3AQBihSV4PLEhNN-iMf78E1Sw" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:18,448 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:30:18,706 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:18,884 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:18,943 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:18,944 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:19,121 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ4qw.e7WkFDcIw66HNaw8WJsd30H6ZCs" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:19,121 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:30:19,300 [INFO] job_ai:134 - 用户登录: tester001
-2026-09-10 17:30:19,550 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:19,731 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:19,793 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:19,793 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:19,975 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ4qw.e7WkFDcIw66HNaw8WJsd30H6ZCs" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:19,976 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:30:20,255 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:20,436 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:20,502 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:20,502 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:20,822 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:21,013 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:21,074 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:21,075 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:21,289 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ4rQ.8fd-YVFgLg8BxLIY09ntsomc1aQ" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:21,290 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:30:21,642 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:21,844 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:21,907 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:21,907 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:22,203 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:22,405 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:22,471 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:22,471 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:22,739 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:22,915 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:22,977 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:22,977 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:23,164 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ4rw.BDJEMQzSBtF8zD6Bsjmg2cmCHzs" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:23,164 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:30:26,930 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:27,107 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:27,170 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:27,170 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:27,351 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ4sw.1IOFZ2kX_SixY0FeeTdZNKThl2w" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:27,351 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:30:27,606 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:27,785 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:27,849 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:27,849 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:47,437 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:47,617 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:47,682 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:47,682 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:47,861 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ4xw.B6eqwyvCK1SY9itBZkV81TvX6LE" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:47,861 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:30:48,577 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:48,782 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:48,859 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:48,859 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:49,081 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ4yQ.I1eOY011kEBrAG__ZF8SlFKHjjo" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:49,082 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:30:49,358 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:49,562 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:49,652 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:49,652 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:57,517 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:57,694 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:57,755 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:57,756 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:57,939 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=alice@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImFsaWNlQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ40Q.DKsxmMXiVx87U98hpeIjU0NCF_8" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:57,939 [INFO] job_ai:96 - 新用户注册: alice2026 (alice@test.com)
-2026-09-10 17:30:58,188 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:58,370 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:58,434 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:58,434 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:58,704 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:58,896 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:58,959 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:58,959 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:59,152 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=carol@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImNhcm9sQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ40w.H9zlJYM1hLQNDzVxPmDYtVxsc6c" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:59,152 [INFO] job_ai:96 - 新用户注册: carol2026 (carol@test.com)
-2026-09-10 17:30:59,438 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:30:59,647 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:30:59,710 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:30:59,712 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:30:59,909 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=dave@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImRhdmVAdGVzdC5jb20iLCJwdXJwb3NlIjoidmVyaWZ5In0.aqJ40w.IJon4nkgDMiIsF5ptdBmtN90W0I" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:30:59,909 [INFO] job_ai:96 - 新用户注册: dave2026 (dave@test.com)
-2026-09-10 17:31:00,094 [INFO] job_ai:134 - 用户登录: dave2026
-2026-09-10 17:31:00,364 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:31:00,550 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:31:00,615 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:31:00,615 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:31:00,810 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=eve@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImV2ZUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ41A.37yQdSZ56aVf5kmrUEvF-J5KDVo" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:31:00,810 [INFO] job_ai:96 - 新用户注册: eve2026 (eve@test.com)
-2026-09-10 17:31:01,245 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:31:01,440 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:31:01,504 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:31:01,504 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:31:01,686 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=frank@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImZyYW5rQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ41Q.qbLws46PXvQsEYAfnxKhkT1wslk" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:31:01,686 [INFO] job_ai:96 - 新用户注册: frank2026 (frank@test.com)
-2026-09-10 17:31:02,682 [WARNING] job_ai:127 - 账号 frank2026 连续失败被锁定
-2026-09-10 17:31:02,963 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:31:03,155 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:31:03,228 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:31:03,228 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:31:03,539 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:31:03,755 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:31:03,845 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:31:03,845 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:31:04,054 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ42A.FZ2fN4H0ub5uesFmHsASBGtMH-c" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:31:04,054 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:31:04,370 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:31:04,596 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:31:04,662 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:31:04,662 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:31:04,871 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ42A.FZ2fN4H0ub5uesFmHsASBGtMH-c" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:31:04,872 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:31:05,108 [INFO] job_ai:134 - 用户登录: tester001
-2026-09-10 17:31:05,388 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:31:05,588 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:31:05,657 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:31:05,657 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:31:05,851 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ42Q.kDc-3f5R-ksyEaQDxo1ZnDNtk0M" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:31:05,851 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:31:06,196 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:31:06,430 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:31:06,510 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:31:06,512 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:31:06,907 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:31:07,109 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:31:07,189 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:31:07,190 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:31:07,382 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ42w.7B1d0Ir2rprnkIGJKmYEXcbygp0" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:31:07,383 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:31:07,676 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:31:07,867 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:31:07,932 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:31:07,932 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:31:08,208 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:31:08,409 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:31:08,475 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:31:08,476 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:31:08,784 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:31:09,022 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:31:09,094 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:31:09,094 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:31:09,317 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ43Q.MBG0SEbfGK-Z6pdb-2MkUaTu-rE" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:31:09,317 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:31:10,115 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:31:10,333 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:31:10,436 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:31:10,438 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:31:10,657 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ43g.767ZjLoz5_cdn2SX6zZ7hSUKhMs" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:31:10,657 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:31:10,964 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:31:11,177 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:31:11,269 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:31:11,269 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:31:19,462 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:31:19,641 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:31:19,704 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:31:19,709 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
-2026-09-10 17:31:19,709 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:31:20,659 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
-2026-09-10 17:31:20,659 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:40:01,868 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:40:02,043 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:40:02,110 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:40:02,110 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:40:02,292 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=alice@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImFsaWNlQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ68g.mBEKhqtf3tPz-l6zZkxFB9iEsZQ" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:40:02,292 [INFO] job_ai:96 - 新用户注册: alice2026 (alice@test.com)
-2026-09-10 17:40:02,538 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:40:02,714 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:40:02,779 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:40:02,779 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:13,373 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:13,547 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:13,610 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:13,611 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:13,787 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=alice@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImFsaWNlQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ7OQ.NlIQCarBONV8_52e-prnzbmYjhA" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:41:13,788 [INFO] job_ai:96 - 新用户注册: alice2026 (alice@test.com)
-2026-09-10 17:41:14,032 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:14,206 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:14,268 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:14,268 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:14,516 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:14,690 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:14,752 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:14,753 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:14,931 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=carol@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImNhcm9sQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ7Og.OfEERwbRIYceCaynevJl1-d8gtY" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:41:14,932 [INFO] job_ai:96 - 新用户注册: carol2026 (carol@test.com)
-2026-09-10 17:41:15,183 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:15,361 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:15,424 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:15,424 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:15,601 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=dave@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImRhdmVAdGVzdC5jb20iLCJwdXJwb3NlIjoidmVyaWZ5In0.aqJ7Ow.DhvsVniXfc05mwYoIc99y8uD2EQ" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:41:15,601 [INFO] job_ai:96 - 新用户注册: dave2026 (dave@test.com)
-2026-09-10 17:41:15,778 [INFO] job_ai:134 - 用户登录: dave2026
-2026-09-10 17:41:16,025 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:16,207 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:16,290 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:16,290 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:16,472 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=eve@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImV2ZUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ7PA.tEtNKbEzJ9eXp5fEQ3bnyDcnUVU" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:41:16,473 [INFO] job_ai:96 - 新用户注册: eve2026 (eve@test.com)
-2026-09-10 17:41:16,927 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:17,132 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:17,199 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:17,199 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:17,407 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=frank@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImZyYW5rQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ7PQ.69Eq8Y57VZGf72HnHzvMNINV0EY" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:41:17,407 [INFO] job_ai:96 - 新用户注册: frank2026 (frank@test.com)
-2026-09-10 17:41:18,384 [WARNING] job_ai:127 - 账号 frank2026 连续失败被锁定
-2026-09-10 17:41:18,645 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:18,825 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:18,887 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:18,887 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:19,150 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:19,329 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:19,401 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:19,401 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:19,607 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ7Pw.DIWT5mRVbmzb8I8__6ACJ772S1A" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:41:19,607 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:41:19,907 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:20,091 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:20,154 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:20,155 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:20,335 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ7QA.AkQuoy4SOKWuKRyHbQ4ne6M61UI" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:41:20,335 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:41:20,518 [INFO] job_ai:134 - 用户登录: tester001
-2026-09-10 17:41:20,780 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:20,977 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:21,043 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:21,043 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:21,273 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ7QQ.VrYT9APUsoLt6Jo0lAQ7QHozdts" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:41:21,273 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:41:21,546 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:21,732 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:21,797 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:21,797 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:22,219 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:22,443 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:22,503 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:22,505 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:22,717 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ7Qg.0lf-k0TCJCrMoygZ1LjptGWOPKY" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:41:22,717 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:41:23,004 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:23,200 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:23,265 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:23,265 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:23,572 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:23,767 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:23,833 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:23,833 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:24,109 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:24,297 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:24,365 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:24,366 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:24,563 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ7RA.pWWN0x4v0nnN4-8kxNSlRwOI8X8" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:41:24,563 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:41:25,388 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:25,565 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:25,626 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:25,626 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:25,817 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ7RQ.hST5c6eiPl1W0_YgqSZfcxJse8I" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:41:25,817 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:41:26,148 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:41:26,335 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:41:26,401 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:41:26,401 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:41:39,543 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
-2026-09-10 17:41:39,544 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:18,901 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
-2026-09-10 17:42:18,901 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:20,897 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
-2026-09-10 17:42:20,898 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:22,935 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
-2026-09-10 17:42:22,935 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:24,933 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
-2026-09-10 17:42:24,933 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:32,723 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:32,898 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:32,961 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:32,961 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:33,144 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=alice@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImFsaWNlQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ7iQ.PO5qSzCTQMXKxbejIqbyDGOtbeM" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:42:33,144 [INFO] job_ai:96 - 新用户注册: alice2026 (alice@test.com)
-2026-09-10 17:42:33,391 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:33,567 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:33,627 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:33,628 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:33,872 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:34,050 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:34,110 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:34,110 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:34,287 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=carol@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImNhcm9sQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ7ig.AQDxivKXHMNulJQXAJyJ8Fb8GNE" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:42:34,287 [INFO] job_ai:96 - 新用户注册: carol2026 (carol@test.com)
-2026-09-10 17:42:34,537 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:34,711 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:34,771 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:34,771 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:34,948 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=dave@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImRhdmVAdGVzdC5jb20iLCJwdXJwb3NlIjoidmVyaWZ5In0.aqJ7ig.hFEyGZhzKmOBEX9IG7MAnYFb4_s" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:42:34,949 [INFO] job_ai:96 - 新用户注册: dave2026 (dave@test.com)
-2026-09-10 17:42:35,129 [INFO] job_ai:134 - 用户登录: dave2026
-2026-09-10 17:42:35,384 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:35,558 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:35,620 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:35,621 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:35,797 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=eve@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImV2ZUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ7iw.05EA2KY8RYEjgxK3u5dTA3qm2Is" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:42:35,800 [INFO] job_ai:96 - 新用户注册: eve2026 (eve@test.com)
-2026-09-10 17:42:36,229 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:36,407 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:36,471 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:36,471 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:36,660 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=frank@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImZyYW5rQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ7jA.7A808NKN-X1vQuAk601ex54dZ40" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:42:36,661 [INFO] job_ai:96 - 新用户注册: frank2026 (frank@test.com)
-2026-09-10 17:42:37,548 [WARNING] job_ai:127 - 账号 frank2026 连续失败被锁定
-2026-09-10 17:42:37,794 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:37,971 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:38,032 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:38,032 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:38,277 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:38,458 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:38,518 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:38,518 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:38,698 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ7jg.ilJnUpihvPWTZykmjshknw34GTU" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:42:38,699 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:42:38,954 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:39,132 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:39,195 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:39,196 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:39,373 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ7jw.gkkdMHKR7e46T_8U5Xf3xKO2gZg" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:42:39,374 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:42:39,550 [INFO] job_ai:134 - 用户登录: tester001
-2026-09-10 17:42:39,797 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:39,975 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:40,033 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:40,033 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:40,211 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ7kA.h-hUVjEZZDrRW1as0Y7lbq_cKxI" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:42:40,211 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:42:40,464 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:40,639 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:40,700 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:40,700 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:41,010 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:41,187 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:41,245 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:41,245 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:41,427 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ7kQ.upZVjGoei-0o3H4F0JPV_bNyid4" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:42:41,427 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:42:41,698 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:41,877 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:41,945 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:41,945 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:42,214 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:42,391 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:42,453 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:42,453 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:42,718 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:42,895 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:42,956 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:42,957 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:43,133 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ7kw.qRa8j6-ego1apSxVG7kqOPnNnl8" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:42:43,134 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:42:43,847 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:44,026 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:44,087 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:44,087 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:42:44,262 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ7lA.I_bdsvyLmiSwt9p8L9bCDsz1WFg" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:42:44,262 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:42:44,513 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:42:44,693 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:42:44,754 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:42:44,754 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:45:20,632 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
-2026-09-10 17:45:20,632 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:45:21,479 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
-2026-09-10 17:45:21,479 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:45:46,862 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=smoke01@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://127.0.0.1:5000/api/auth/verify-email?token=eyJlbWFpbCI6InNtb2tlMDFAdGVzdC5jb20iLCJwdXJwb3NlIjoidmVyaWZ5In0.aqJ8Sg.iiw7FxQI97GLoBVqoYg87UV704o" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:45:46,862 [INFO] job_ai:96 - 新用户注册: smoketest01 (smoke01@test.com)
-2026-09-10 17:45:47,046 [INFO] job_ai:134 - 用户登录: smoketest01
-2026-09-10 17:46:05,346 [INFO] job_ai:134 - 用户登录: smoketest01
-2026-09-10 17:46:18,524 [INFO] job_ai:134 - 用户登录: smoketest01
-2026-09-10 17:46:47,961 [INFO] job_ai:134 - 用户登录: smoketest01
-2026-09-10 17:47:05,569 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
-2026-09-10 17:47:05,570 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:47:16,491 [INFO] job_ai:134 - 用户登录: smoketest01
-2026-09-10 17:47:27,715 [INFO] job_ai:134 - 用户登录: smoketest01
-2026-09-10 17:47:27,759 [INFO] job_ai:74 - 爬虫任务#1 启动 mode=mock threads=1
-2026-09-10 17:49:05,203 [INFO] job_ai:134 - 用户登录: smoketest01
-2026-09-10 17:49:32,153 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
-2026-09-10 17:49:32,153 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:23,886 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:24,087 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:24,160 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:24,161 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:24,360 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=alice@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImFsaWNlQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ9YA.tUZKIxHq8JNygOs4LdO30vBIOxw" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:50:24,360 [INFO] job_ai:96 - 新用户注册: alice2026 (alice@test.com)
-2026-09-10 17:50:24,664 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:24,893 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:24,994 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:24,995 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:25,300 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:25,487 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:25,568 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:25,569 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:25,791 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=carol@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImNhcm9sQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ9YQ.9xOeh6Kt6UzRZ2p2IdgSgJPRwrg" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:50:25,792 [INFO] job_ai:96 - 新用户注册: carol2026 (carol@test.com)
-2026-09-10 17:50:26,303 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:26,479 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:26,543 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:26,544 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:26,738 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=dave@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImRhdmVAdGVzdC5jb20iLCJwdXJwb3NlIjoidmVyaWZ5In0.aqJ9Yg.d86upoFSu2zj9cNZQb_8TktENZk" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:50:26,739 [INFO] job_ai:96 - 新用户注册: dave2026 (dave@test.com)
-2026-09-10 17:50:26,917 [INFO] job_ai:134 - 用户登录: dave2026
-2026-09-10 17:50:27,177 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:27,379 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:27,449 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:27,449 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:27,674 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=eve@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImV2ZUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ9Yw._vq9eCO1Q2xqdMAkDfM2U3LDnX8" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:50:27,675 [INFO] job_ai:96 - 新用户注册: eve2026 (eve@test.com)
-2026-09-10 17:50:28,201 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:28,374 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:28,435 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:28,436 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:28,635 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=frank@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImZyYW5rQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ9ZA.kBUFWrdrnX55D5_wORv-Ttf-yco" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:50:28,636 [INFO] job_ai:96 - 新用户注册: frank2026 (frank@test.com)
-2026-09-10 17:50:29,572 [WARNING] job_ai:127 - 账号 frank2026 连续失败被锁定
-2026-09-10 17:50:29,958 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:30,151 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:30,214 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:30,214 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:30,515 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:30,702 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:30,760 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:30,761 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:30,949 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ9Zg.Vj9xqvRqMP7mpaXc4PdoPGSCADc" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:50:30,949 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:50:31,220 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:31,413 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:31,481 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:31,482 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:31,670 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ9Zw.OID5L6XBbONJSlgwzztrInoxGFQ" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:50:31,670 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:50:31,847 [INFO] job_ai:134 - 用户登录: tester001
-2026-09-10 17:50:32,423 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:32,597 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:32,657 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:32,657 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:32,934 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:33,122 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:33,186 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:33,186 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:33,379 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ9aQ.Z6VQXPRk8L3hFk50SlEiF8GOhvo" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:50:33,380 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:50:33,646 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
-2026-09-10 17:50:33,646 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:33,674 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:33,859 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:33,921 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:33,922 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:34,189 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:34,364 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:34,424 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:34,424 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:34,684 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:34,863 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:34,924 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:34,925 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:35,103 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ9aw.GXO65zNDFSdLrskHeY3q-apW4qI" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:50:35,103 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:50:35,872 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:36,064 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:36,130 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:36,130 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:50:36,305 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ9bA.M9UmX3TcHg9Twvr4ffe_er06zsw" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:50:36,306 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:50:36,568 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:50:36,745 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:50:36,803 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:50:36,804 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:07,447 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:07,620 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:07,681 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:07,681 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:07,860 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=alice@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImFsaWNlQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ9iw.gCBfxIhA6R-gnUil-hlhw5a-GzY" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:51:07,860 [INFO] job_ai:96 - 新用户注册: alice2026 (alice@test.com)
-2026-09-10 17:51:08,097 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:08,271 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:08,333 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:08,333 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:08,579 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:08,756 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:08,813 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:08,814 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:08,997 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=carol@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImNhcm9sQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ9jA.hKz7NH-vrZjRlrZ56xWeGl1egaA" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:51:08,997 [INFO] job_ai:96 - 新用户注册: carol2026 (carol@test.com)
-2026-09-10 17:51:09,243 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:09,418 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:09,478 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:09,478 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:09,653 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=dave@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImRhdmVAdGVzdC5jb20iLCJwdXJwb3NlIjoidmVyaWZ5In0.aqJ9jQ.MdNHIngBqNQurhaiIeduNE_pLfc" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:51:09,653 [INFO] job_ai:96 - 新用户注册: dave2026 (dave@test.com)
-2026-09-10 17:51:09,827 [INFO] job_ai:134 - 用户登录: dave2026
-2026-09-10 17:51:10,074 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:10,249 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:10,309 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:10,310 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:10,483 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=eve@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImV2ZUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ9jg.B2EJQFDTVCqgRDyEHE-IO3sL3c8" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:51:10,483 [INFO] job_ai:96 - 新用户注册: eve2026 (eve@test.com)
-2026-09-10 17:51:10,899 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:11,072 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:11,132 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:11,133 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:11,307 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=frank@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6ImZyYW5rQHRlc3QuY29tIiwicHVycG9zZSI6InZlcmlmeSJ9.aqJ9jw.oiazLw2UIAH9xeHAF6YfKzswOxc" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:51:11,307 [INFO] job_ai:96 - 新用户注册: frank2026 (frank@test.com)
-2026-09-10 17:51:12,173 [WARNING] job_ai:127 - 账号 frank2026 连续失败被锁定
-2026-09-10 17:51:12,421 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:12,595 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:12,656 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:12,656 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:12,897 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:13,071 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:13,131 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:13,132 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:13,305 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ9kQ.0tQCqan7UCUcGWmc7YNcAMC-tMM" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:51:13,305 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:51:13,558 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:13,735 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:13,792 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:13,792 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:13,964 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ9kQ.0tQCqan7UCUcGWmc7YNcAMC-tMM" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:51:13,964 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:51:14,141 [INFO] job_ai:134 - 用户登录: tester001
-2026-09-10 17:51:14,385 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:14,558 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:14,613 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:14,614 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:14,789 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ9kg.2i0xaZEfyvPJMGVDutibrz_sjIE" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:51:14,789 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:51:15,069 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:15,246 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:15,305 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:15,306 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:15,578 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:15,760 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:15,836 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:15,836 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:16,012 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ9lA.6LaW_fGocwrkeyXhVDwg45RGb7M" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:51:16,012 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:51:16,272 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:16,445 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:16,504 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:16,504 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:16,757 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:16,930 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:16,987 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:16,988 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:17,256 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:17,429 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:17,488 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:17,488 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:17,664 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ9lQ.vLOI9Uf3k396yHj0lcgtGiqJ1Kg" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:51:17,664 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:51:18,369 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:18,542 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:18,600 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:18,600 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:51:18,775 [INFO] job_ai:23 - [邮件降级-未配置SMTP] 收件人=tester001@test.com 主题=【智聘通】邮箱验证
-
-    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:12px">
-      <h2 style="color:#2563eb">智聘通 · 邮箱验证</h2>
-      <p>您好，欢迎注册智聘通智能招聘平台。请点击下方按钮完成邮箱验证：</p>
-      <a href="http://localhost/api/auth/verify-email?token=eyJlbWFpbCI6InRlc3RlcjAwMUB0ZXN0LmNvbSIsInB1cnBvc2UiOiJ2ZXJpZnkifQ.aqJ9lg.mkNxabjptcfBsvQBnN5g1FiXU34" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none">立即验证</a>
-      <p style="color:#6b7280;font-size:12px">如非本人操作，请忽略此邮件。</p>
-    </div>
-2026-09-10 17:51:18,775 [INFO] job_ai:96 - 新用户注册: tester001 (tester001@test.com)
-2026-09-10 17:51:19,019 [INFO] job_ai:116 - 已创建默认管理员: admin / Admin@123456
-2026-09-10 17:51:19,193 [INFO] job_ai:134 - 已创建演示用户: demo / Demo@123456
-2026-09-10 17:51:19,254 [INFO] job_ai:148 - 已生成演示职位数据 80 条
-2026-09-10 17:51:19,254 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:52:13,844 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
-2026-09-10 17:52:13,844 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:52:14,651 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
-2026-09-10 17:52:14,652 [INFO] job_ai:64 - 智聘通后端启动完成
-2026-09-10 17:53:04,030 [INFO] job_ai:134 - 用户登录: demo
+2026-09-12 21:25:46,955 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
+2026-09-12 21:25:46,963 [INFO] job_ai:64 - 智聘通后端启动完成
+2026-09-12 21:28:29,932 [INFO] job_ai:134 - 用户登录: demo
+2026-09-12 21:28:50,898 [INFO] job_ai:134 - 用户登录: admin
+2026-09-12 21:29:00,282 [INFO] job_ai:134 - 用户登录: demo
+2026-09-12 21:29:18,418 [INFO] job_ai:58 - 已启用 CDP 附加模式，将复用已打开的浏览器（单线程）
+2026-09-12 21:29:18,475 [INFO] job_ai:91 - 爬虫任务#6 启动 mode=real threads=1
+2026-09-12 21:30:00,008 [WARNING] job_ai:115 - edge headless=new 启动失败(Message: session not created: Microsoft Edge failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from msedge location C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff65c0ef4d5+4ab5]
+	msedgedriver!(No symbol) [0x7ff65c045024]
+	msedgedriver!GetHandleVerifier [0x7ff65c468560+37db40]
+	msedgedriver!(No symbol) [0x7ff65be1df52]
+	msedgedriver!(No symbol) [0x7ff65be19a91]
+	msedgedriver!(No symbol) [0x7ff65be5ab43]
+	msedgedriver!(No symbol) [0x7ff65be5a4d6]
+	msedgedriver!(No symbol) [0x7ff65be25a1c]
+	msedgedriver!(No symbol) [0x7ff65be24cb4]
+	msedgedriver!(No symbol) [0x7ff65be25843]
+	msedgedriver!(No symbol) [0x7ff65bf513cb]
+	msedgedriver!(No symbol) [0x7ff65bf627a4]
+	msedgedriver!GetHandleVerifier [0x7ff65c197195+ac775]
+	msedgedriver!GetHandleVerifier [0x7ff65c19d2b1+b2891]
+	msedgedriver!(No symbol) [0x7ff65c050876]
+	msedgedriver!(No symbol) [0x7ff65c04b364]
+	msedgedriver!(No symbol) [0x7ff65c04b485]
+	msedgedriver!(No symbol) [0x7ff65c03d018]
+	KERNEL32!BaseThreadInitThunk [0x7ffd5a4ecd87+17]
+	ntdll!RtlUserThreadStart [0x7ffd5c66caec+2c]
+)，回退为 headless
+2026-09-12 21:35:24,498 [INFO] job_ai:105 - 爬虫任务已请求停止
+2026-09-12 21:36:30,526 [INFO] job_ai:58 - 已启用 CDP 附加模式，将复用已打开的浏览器（单线程）
+2026-09-12 21:36:30,578 [INFO] job_ai:91 - 爬虫任务#7 启动 mode=real threads=1
+2026-09-12 21:36:58,884 [INFO] job_ai:105 - 爬虫任务已请求停止
+2026-09-12 21:36:59,247 [WARNING] job_ai:115 - edge headless=new 启动失败(Message: session not created: Microsoft Edge failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from msedge location C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff65c0ef4d5+4ab5]
+	msedgedriver!(No symbol) [0x7ff65c045024]
+	msedgedriver!GetHandleVerifier [0x7ff65c468560+37db40]
+	msedgedriver!(No symbol) [0x7ff65be1df52]
+	msedgedriver!(No symbol) [0x7ff65be19a91]
+	msedgedriver!(No symbol) [0x7ff65be5ab43]
+	msedgedriver!(No symbol) [0x7ff65be5a4d6]
+	msedgedriver!(No symbol) [0x7ff65be25a1c]
+	msedgedriver!(No symbol) [0x7ff65be24cb4]
+	msedgedriver!(No symbol) [0x7ff65be25843]
+	msedgedriver!(No symbol) [0x7ff65bf513cb]
+	msedgedriver!(No symbol) [0x7ff65bf627a4]
+	msedgedriver!GetHandleVerifier [0x7ff65c197195+ac775]
+	msedgedriver!GetHandleVerifier [0x7ff65c19d2b1+b2891]
+	msedgedriver!(No symbol) [0x7ff65c050876]
+	msedgedriver!(No symbol) [0x7ff65c04b364]
+	msedgedriver!(No symbol) [0x7ff65c04b485]
+	msedgedriver!(No symbol) [0x7ff65c03d018]
+	KERNEL32!BaseThreadInitThunk [0x7ffd5a4ecd87+17]
+	ntdll!RtlUserThreadStart [0x7ffd5c66caec+2c]
+)，回退为 headless
+2026-09-12 21:37:09,566 [INFO] job_ai:58 - 已启用 CDP 附加模式，将复用已打开的浏览器（单线程）
+2026-09-12 21:37:39,634 [INFO] job_ai:91 - 爬虫任务#8 启动 mode=auto threads=1
+2026-09-12 21:39:02,481 [INFO] job_ai:105 - 爬虫任务已请求停止
+2026-09-12 21:39:21,776 [WARNING] job_ai:115 - edge headless=new 启动失败(Message: session not created: Microsoft Edge failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from msedge location C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff65c0ef4d5+4ab5]
+	msedgedriver!(No symbol) [0x7ff65c045024]
+	msedgedriver!GetHandleVerifier [0x7ff65c468560+37db40]
+	msedgedriver!(No symbol) [0x7ff65be1df52]
+	msedgedriver!(No symbol) [0x7ff65be19a91]
+	msedgedriver!(No symbol) [0x7ff65be5ab43]
+	msedgedriver!(No symbol) [0x7ff65be5a4d6]
+	msedgedriver!(No symbol) [0x7ff65be25a1c]
+	msedgedriver!(No symbol) [0x7ff65be24cb4]
+	msedgedriver!(No symbol) [0x7ff65be25843]
+	msedgedriver!(No symbol) [0x7ff65bf513cb]
+	msedgedriver!(No symbol) [0x7ff65bf627a4]
+	msedgedriver!GetHandleVerifier [0x7ff65c197195+ac775]
+	msedgedriver!GetHandleVerifier [0x7ff65c19d2b1+b2891]
+	msedgedriver!(No symbol) [0x7ff65c050876]
+	msedgedriver!(No symbol) [0x7ff65c04b364]
+	msedgedriver!(No symbol) [0x7ff65c04b485]
+	msedgedriver!(No symbol) [0x7ff65c03d018]
+	KERNEL32!BaseThreadInitThunk [0x7ffd5a4ecd87+17]
+	ntdll!RtlUserThreadStart [0x7ffd5c66caec+2c]
+)，回退为 headless
+2026-09-12 21:43:45,483 [INFO] job_ai:151 - worker#0 退出
+2026-09-12 21:46:04,588 [INFO] job_ai:58 - 已启用 CDP 附加模式，将复用已打开的浏览器（单线程）
+2026-09-12 21:46:04,628 [INFO] job_ai:91 - 爬虫任务#9 启动 mode=real threads=1
+2026-09-12 21:46:34,062 [WARNING] job_ai:115 - edge headless=new 启动失败(Message: session not created: Microsoft Edge failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from msedge location C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff65c0ef4d5+4ab5]
+	msedgedriver!(No symbol) [0x7ff65c045024]
+	msedgedriver!GetHandleVerifier [0x7ff65c468560+37db40]
+	msedgedriver!(No symbol) [0x7ff65be1df52]
+	msedgedriver!(No symbol) [0x7ff65be19a91]
+	msedgedriver!(No symbol) [0x7ff65be5ab43]
+	msedgedriver!(No symbol) [0x7ff65be5a4d6]
+	msedgedriver!(No symbol) [0x7ff65be25a1c]
+	msedgedriver!(No symbol) [0x7ff65be24cb4]
+	msedgedriver!(No symbol) [0x7ff65be25843]
+	msedgedriver!(No symbol) [0x7ff65bf513cb]
+	msedgedriver!(No symbol) [0x7ff65bf627a4]
+	msedgedriver!GetHandleVerifier [0x7ff65c197195+ac775]
+	msedgedriver!GetHandleVerifier [0x7ff65c19d2b1+b2891]
+	msedgedriver!(No symbol) [0x7ff65c050876]
+	msedgedriver!(No symbol) [0x7ff65c04b364]
+	msedgedriver!(No symbol) [0x7ff65c04b485]
+	msedgedriver!(No symbol) [0x7ff65c03d018]
+	KERNEL32!BaseThreadInitThunk [0x7ffd5a4ecd87+17]
+	ntdll!RtlUserThreadStart [0x7ffd5c66caec+2c]
+)，回退为 headless
+2026-09-12 21:46:58,189 [INFO] job_ai:105 - 爬虫任务已请求停止
+2026-09-12 21:53:15,497 [WARNING] job_ai:150 - 详情页获取失败 https://msearch.51job.com/jobs/all/172790617.html: Message: timeout: Timed out receiving message from renderer: 9.564
+  (Session info: MicrosoftEdge=152.0.4191.66)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff65c0ef4d5+4ab5]
+	msedgedriver!(No symbol) [0x7ff65c045024]
+	msedgedriver!GetHandleVerifier [0x7ff65c468560+37db40]
+	msedgedriver!(No symbol) [0x7ff65bdd7d7d]
+	msedgedriver!(No symbol) [0x7ff65bdd7bd5]
+	msedgedriver!(No symbol) [0x7ff65bdd5d92]
+	msedgedriver!(No symbol) [0x7ff65bdd65cf]
+	msedgedriver!(No symbol) [0x7ff65bde0bd0]
+	msedgedriver!(No symbol) [0x7ff65bdf1cad]
+	msedgedriver!(No symbol) [0x7ff65bdf7b0a]
+	msedgedriver!(No symbol) [0x7ff65bdd6f68]
+	msedgedriver!(No symbol) [0x7ff65bdd6c7e]
+	msedgedriver!(No symbol) [0x7ff65bdf1a54]
+	msedgedriver!(No symbol) [0x7ff65be6b952]
+	msedgedriver!(No symbol) [0x7ff65be25a1c]
+	msedgedriver!(No symbol) [0x7ff65be24cb4]
+	msedgedriver!(No symbol) [0x7ff65be25843]
+	msedgedriver!(No symbol) [0x7ff65bf513cb]
+	msedgedriver!(No symbol) [0x7ff65bf627a4]
+	msedgedriver!GetHandleVerifier [0x7ff65c197195+ac775]
+	msedgedriver!GetHandleVerifier [0x7ff65c19d2b1+b2891]
+	msedgedriver!(No symbol) [0x7ff65c050876]
+	msedgedriver!(No symbol) [0x7ff65c04b364]
+	msedgedriver!(No symbol) [0x7ff65c04b485]
+	msedgedriver!(No symbol) [0x7ff65c03d018]
+	KERNEL32!BaseThreadInitThunk [0x7ffd5a4ecd87+17]
+	ntdll!RtlUserThreadStart [0x7ffd5c66caec+2c]
+
+2026-09-12 21:53:29,257 [WARNING] job_ai:150 - 详情页获取失败 https://msearch.51job.com/jobs/all/156893643.html: Message: timeout: Timed out receiving message from renderer: 10.230
+  (Session info: MicrosoftEdge=152.0.4191.66)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff65c0ef4d5+4ab5]
+	msedgedriver!(No symbol) [0x7ff65c045024]
+	msedgedriver!GetHandleVerifier [0x7ff65c468560+37db40]
+	msedgedriver!(No symbol) [0x7ff65bdd7d7d]
+	msedgedriver!(No symbol) [0x7ff65bdd7bd5]
+	msedgedriver!(No symbol) [0x7ff65bdd5d92]
+	msedgedriver!(No symbol) [0x7ff65bdd65cf]
+	msedgedriver!(No symbol) [0x7ff65bde0bd0]
+	msedgedriver!(No symbol) [0x7ff65bdf1cad]
+	msedgedriver!(No symbol) [0x7ff65bdf7b0a]
+	msedgedriver!(No symbol) [0x7ff65bdd6f68]
+	msedgedriver!(No symbol) [0x7ff65bdd6c7e]
+	msedgedriver!(No symbol) [0x7ff65bdf1a54]
+	msedgedriver!(No symbol) [0x7ff65be6b952]
+	msedgedriver!(No symbol) [0x7ff65be25a1c]
+	msedgedriver!(No symbol) [0x7ff65be24cb4]
+	msedgedriver!(No symbol) [0x7ff65be25843]
+	msedgedriver!(No symbol) [0x7ff65bf513cb]
+	msedgedriver!(No symbol) [0x7ff65bf627a4]
+	msedgedriver!GetHandleVerifier [0x7ff65c197195+ac775]
+	msedgedriver!GetHandleVerifier [0x7ff65c19d2b1+b2891]
+	msedgedriver!(No symbol) [0x7ff65c050876]
+	msedgedriver!(No symbol) [0x7ff65c04b364]
+	msedgedriver!(No symbol) [0x7ff65c04b485]
+	msedgedriver!(No symbol) [0x7ff65c03d018]
+	KERNEL32!BaseThreadInitThunk [0x7ffd5a4ecd87+17]
+	ntdll!RtlUserThreadStart [0x7ffd5c66caec+2c]
+
+2026-09-12 21:53:43,100 [WARNING] job_ai:150 - 详情页获取失败 https://msearch.51job.com/jobs/all/173510136.html: Message: timeout: Timed out receiving message from renderer: 11.220
+  (Session info: MicrosoftEdge=152.0.4191.66)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff65c0ef4d5+4ab5]
+	msedgedriver!(No symbol) [0x7ff65c045024]
+	msedgedriver!GetHandleVerifier [0x7ff65c468560+37db40]
+	msedgedriver!(No symbol) [0x7ff65bdd7d7d]
+	msedgedriver!(No symbol) [0x7ff65bdd7bd5]
+	msedgedriver!(No symbol) [0x7ff65bdd5d92]
+	msedgedriver!(No symbol) [0x7ff65bdd65cf]
+	msedgedriver!(No symbol) [0x7ff65bde0bd0]
+	msedgedriver!(No symbol) [0x7ff65bdf1cad]
+	msedgedriver!(No symbol) [0x7ff65bdf7b0a]
+	msedgedriver!(No symbol) [0x7ff65bdd6f68]
+	msedgedriver!(No symbol) [0x7ff65bdd6c7e]
+	msedgedriver!(No symbol) [0x7ff65bdf1a54]
+	msedgedriver!(No symbol) [0x7ff65be6b952]
+	msedgedriver!(No symbol) [0x7ff65be25a1c]
+	msedgedriver!(No symbol) [0x7ff65be24cb4]
+	msedgedriver!(No symbol) [0x7ff65be25843]
+	msedgedriver!(No symbol) [0x7ff65bf513cb]
+	msedgedriver!(No symbol) [0x7ff65bf627a4]
+	msedgedriver!GetHandleVerifier [0x7ff65c197195+ac775]
+	msedgedriver!GetHandleVerifier [0x7ff65c19d2b1+b2891]
+	msedgedriver!(No symbol) [0x7ff65c050876]
+	msedgedriver!(No symbol) [0x7ff65c04b364]
+	msedgedriver!(No symbol) [0x7ff65c04b485]
+	msedgedriver!(No symbol) [0x7ff65c03d018]
+	KERNEL32!BaseThreadInitThunk [0x7ffd5a4ecd87+17]
+	ntdll!RtlUserThreadStart [0x7ffd5c66caec+2c]
+
+2026-09-12 21:55:06,010 [INFO] job_ai:58 - 已启用 CDP 附加模式，将复用已打开的浏览器（单线程）
+2026-09-12 21:55:06,063 [INFO] job_ai:91 - 爬虫任务#10 启动 mode=real threads=1
+2026-09-12 21:55:24,939 [INFO] job_ai:151 - worker#0 退出
+2026-09-12 21:55:30,152 [INFO] job_ai:323 - 爬虫任务#10 结束，共保存 0 条
+2026-09-12 21:55:42,418 [INFO] job_ai:151 - worker#0 退出
+2026-09-12 21:56:01,375 [WARNING] job_ai:115 - edge headless=new 启动失败(Message: session not created: Microsoft Edge failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from msedge location C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff65c0ef4d5+4ab5]
+	msedgedriver!(No symbol) [0x7ff65c045024]
+	msedgedriver!GetHandleVerifier [0x7ff65c468560+37db40]
+	msedgedriver!(No symbol) [0x7ff65be1df52]
+	msedgedriver!(No symbol) [0x7ff65be19a91]
+	msedgedriver!(No symbol) [0x7ff65be5ab43]
+	msedgedriver!(No symbol) [0x7ff65be5a4d6]
+	msedgedriver!(No symbol) [0x7ff65be25a1c]
+	msedgedriver!(No symbol) [0x7ff65be24cb4]
+	msedgedriver!(No symbol) [0x7ff65be25843]
+	msedgedriver!(No symbol) [0x7ff65bf513cb]
+	msedgedriver!(No symbol) [0x7ff65bf627a4]
+	msedgedriver!GetHandleVerifier [0x7ff65c197195+ac775]
+	msedgedriver!GetHandleVerifier [0x7ff65c19d2b1+b2891]
+	msedgedriver!(No symbol) [0x7ff65c050876]
+	msedgedriver!(No symbol) [0x7ff65c04b364]
+	msedgedriver!(No symbol) [0x7ff65c04b485]
+	msedgedriver!(No symbol) [0x7ff65c03d018]
+	KERNEL32!BaseThreadInitThunk [0x7ffd5a4ecd87+17]
+	ntdll!RtlUserThreadStart [0x7ffd5c66caec+2c]
+)，回退为 headless
+2026-09-12 22:03:08,636 [INFO] job_ai:204 - 定时爬取任务已注册（每6小时）
+2026-09-12 22:03:08,637 [INFO] job_ai:64 - 智聘通后端启动完成
+2026-09-12 22:04:28,990 [INFO] job_ai:134 - 用户登录: admin
+2026-09-12 22:04:51,639 [INFO] job_ai:58 - 已启用 CDP 附加模式，将复用已打开的浏览器（单线程）
+2026-09-12 22:04:51,678 [INFO] job_ai:91 - 爬虫任务#11 启动 mode=real threads=1
+2026-09-12 22:05:10,826 [WARNING] job_ai:115 - edge headless=new 启动失败(Message: session not created: Microsoft Edge failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from msedge location C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7cb8cf4d5+4ab5]
+	msedgedriver!(No symbol) [0x7ff7cb825024]
+	msedgedriver!GetHandleVerifier [0x7ff7cbc48560+37db40]
+	msedgedriver!(No symbol) [0x7ff7cb5fdf52]
+	msedgedriver!(No symbol) [0x7ff7cb5f9a91]
+	msedgedriver!(No symbol) [0x7ff7cb63ab43]
+	msedgedriver!(No symbol) [0x7ff7cb63a4d6]
+	msedgedriver!(No symbol) [0x7ff7cb605a1c]
+	msedgedriver!(No symbol) [0x7ff7cb604cb4]
+	msedgedriver!(No symbol) [0x7ff7cb605843]
+	msedgedriver!(No symbol) [0x7ff7cb7313cb]
+	msedgedriver!(No symbol) [0x7ff7cb7427a4]
+	msedgedriver!GetHandleVerifier [0x7ff7cb977195+ac775]
+	msedgedriver!GetHandleVerifier [0x7ff7cb97d2b1+b2891]
+	msedgedriver!(No symbol) [0x7ff7cb830876]
+	msedgedriver!(No symbol) [0x7ff7cb82b364]
+	msedgedriver!(No symbol) [0x7ff7cb82b485]
+	msedgedriver!(No symbol) [0x7ff7cb81d018]
+	KERNEL32!BaseThreadInitThunk [0x7ffb1651cd87+17]
+	ntdll!RtlUserThreadStart [0x7ffb1768caec+2c]
+)，回退为 headless
+2026-09-12 22:06:58,557 [INFO] job_ai:105 - 爬虫任务已请求停止
+2026-09-12 22:07:30,687 [INFO] job_ai:58 - 已启用 CDP 附加模式，将复用已打开的浏览器（单线程）
+2026-09-12 22:07:30,744 [INFO] job_ai:91 - 爬虫任务#12 启动 mode=real threads=1
+2026-09-12 22:07:48,843 [WARNING] job_ai:115 - edge headless=new 启动失败(Message: session not created: Microsoft Edge failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from msedge location C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7cb8cf4d5+4ab5]
+	msedgedriver!(No symbol) [0x7ff7cb825024]
+	msedgedriver!GetHandleVerifier [0x7ff7cbc48560+37db40]
+	msedgedriver!(No symbol) [0x7ff7cb5fdf52]
+	msedgedriver!(No symbol) [0x7ff7cb5f9a91]
+	msedgedriver!(No symbol) [0x7ff7cb63ab43]
+	msedgedriver!(No symbol) [0x7ff7cb63a4d6]
+	msedgedriver!(No symbol) [0x7ff7cb605a1c]
+	msedgedriver!(No symbol) [0x7ff7cb604cb4]
+	msedgedriver!(No symbol) [0x7ff7cb605843]
+	msedgedriver!(No symbol) [0x7ff7cb7313cb]
+	msedgedriver!(No symbol) [0x7ff7cb7427a4]
+	msedgedriver!GetHandleVerifier [0x7ff7cb977195+ac775]
+	msedgedriver!GetHandleVerifier [0x7ff7cb97d2b1+b2891]
+	msedgedriver!(No symbol) [0x7ff7cb830876]
+	msedgedriver!(No symbol) [0x7ff7cb82b364]
+	msedgedriver!(No symbol) [0x7ff7cb82b485]
+	msedgedriver!(No symbol) [0x7ff7cb81d018]
+	KERNEL32!BaseThreadInitThunk [0x7ffb1651cd87+17]
+	ntdll!RtlUserThreadStart [0x7ffb1768caec+2c]
+)，回退为 headless
+2026-09-12 22:08:20,157 [INFO] job_ai:105 - 爬虫任务已请求停止
+2026-09-12 22:08:32,875 [INFO] job_ai:58 - 已启用 CDP 附加模式，将复用已打开的浏览器（单线程）
+2026-09-12 22:08:32,913 [INFO] job_ai:91 - 爬虫任务#13 启动 mode=auto threads=1
+2026-09-12 22:10:57,061 [INFO] job_ai:105 - 爬虫任务已请求停止
+2026-09-12 22:11:07,798 [INFO] job_ai:58 - 已启用 CDP 附加模式，将复用已打开的浏览器（单线程）
+2026-09-12 22:11:37,851 [INFO] job_ai:91 - 爬虫任务#14 启动 mode=real threads=1
+2026-09-12 22:17:44,240 [INFO] job_ai:105 - 爬虫任务已请求停止
+2026-09-12 22:19:43,932 [WARNING] job_ai:150 - 详情页获取失败 https://msearch.51job.com/jobs/all/161313176.html: Message: timeout: Timed out receiving message from renderer: 11.742
+  (Session info: MicrosoftEdge=152.0.4191.66)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7cb8cf4d5+4ab5]
+	msedgedriver!(No symbol) [0x7ff7cb825024]
+	msedgedriver!GetHandleVerifier [0x7ff7cbc48560+37db40]
+	msedgedriver!(No symbol) [0x7ff7cb5b7d7d]
+	msedgedriver!(No symbol) [0x7ff7cb5b7bd5]
+	msedgedriver!(No symbol) [0x7ff7cb5b5d92]
+	msedgedriver!(No symbol) [0x7ff7cb5b65cf]
+	msedgedriver!(No symbol) [0x7ff7cb5c0bd0]
+	msedgedriver!(No symbol) [0x7ff7cb5d1cad]
+	msedgedriver!(No symbol) [0x7ff7cb5d7b0a]
+	msedgedriver!(No symbol) [0x7ff7cb5b6f68]
+	msedgedriver!(No symbol) [0x7ff7cb5b6c7e]
+	msedgedriver!(No symbol) [0x7ff7cb5d1a54]
+	msedgedriver!(No symbol) [0x7ff7cb64b952]
+	msedgedriver!(No symbol) [0x7ff7cb605a1c]
+	msedgedriver!(No symbol) [0x7ff7cb604cb4]
+	msedgedriver!(No symbol) [0x7ff7cb605843]
+	msedgedriver!(No symbol) [0x7ff7cb7313cb]
+	msedgedriver!(No symbol) [0x7ff7cb7427a4]
+	msedgedriver!GetHandleVerifier [0x7ff7cb977195+ac775]
+	msedgedriver!GetHandleVerifier [0x7ff7cb97d2b1+b2891]
+	msedgedriver!(No symbol) [0x7ff7cb830876]
+	msedgedriver!(No symbol) [0x7ff7cb82b364]
+	msedgedriver!(No symbol) [0x7ff7cb82b485]
+	msedgedriver!(No symbol) [0x7ff7cb81d018]
+	KERNEL32!BaseThreadInitThunk [0x7ffb1651cd87+17]
+	ntdll!RtlUserThreadStart [0x7ffb1768caec+2c]
+
+2026-09-12 22:33:24,031 [INFO] job_ai:58 - 已启用 CDP 附加模式，将复用已打开的浏览器（单线程）
+2026-09-12 22:33:24,087 [INFO] job_ai:91 - 爬虫任务#15 启动 mode=real threads=1

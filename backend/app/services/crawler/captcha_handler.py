@@ -34,28 +34,32 @@ def _body_exists(driver) -> bool:
 
 def handle_captcha(driver, wait_seconds, proxy_pool, callback=None):
     """处理验证码。
-    返回 True 表示已解除；False 表示持续被拦截。
-    策略：等待人工处理 → 轮换代理 → 清空 Cookie 重载
+    返回 True 表示已解除；False 表示持续被拦截；"rotate" 表示需要轮换代理。
+    策略：等待人工处理（窗口保持可见）→ 等待较久仍未解除则轮换代理 → 清空 Cookie 重载
     """
-    logger.warning("检测到验证码，进入处理流程（最多等待 %s 秒）", wait_seconds)
+    logger.warning("检测到验证码，进入处理流程（最多等待 %s 秒，请在浏览器窗口中人工完成验证）",
+                   wait_seconds)
     if callback:
         callback("captcha")
 
     waited = 0
     step = 5
+    # 给人工处理留出时间，等待过半后再考虑代理轮换，避免过早关掉用户正在验证的窗口
+    rotate_at = max(wait_seconds * 3 // 4, 20)
     while waited < wait_seconds:
         time.sleep(step)
         waited += step
         if not detect_captcha(driver):
             logger.info("验证码已解除（等待 %s 秒后）", waited)
             return True
-        # 每 20 秒尝试一次代理轮换
-        if waited % 20 == 0 and proxy_pool and not proxy_pool.is_empty():
+        if waited >= rotate_at and proxy_pool and not proxy_pool.is_empty() \
+                and not getattr(driver, "attach_mode", False):
+            # 附加模式下不能切换代理（也无法退出用户浏览器），只继续等待人工处理
             proxy = proxy_pool.get()
             try:
                 driver.quit()
             except Exception:
                 pass
-            logger.info("轮换代理 %s 以绕过验证码", proxy)
+            logger.info("等待 %s 秒仍未解除，轮换代理 %s 以绕过验证码", waited, proxy)
             return "rotate"
     return False

@@ -30,7 +30,7 @@
                 {{ job.is_favorite ? '已收藏' : '收藏职位' }}
               </el-button>
               <el-button type="success" class="jump-btn" @click="goSource">
-                <el-icon><Position /></el-icon> 去Boss直聘查看
+                <el-icon><Position /></el-icon> 去前程无忧查看
               </el-button>
             </div>
           </div>

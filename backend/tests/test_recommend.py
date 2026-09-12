@@ -15,7 +15,7 @@ def _create_jobs(app, n=5):
                 db.session.add(company)
                 db.session.flush()
             job = Job(
-                boss_job_id=f"test-job-{i}", title=f"Python开发工程师{i}",
+                source_job_id=f"test-job-{i}", title=f"Python开发工程师{i}",
                 salary_text="20-30K", salary_min=20, salary_max=30,
                 city="北京", district="海淀区",
                 job_tags=json.dumps(["Python", "Django", "爬虫"], ensure_ascii=False),

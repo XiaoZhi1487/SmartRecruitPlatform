@@ -143,7 +143,7 @@ def _seed_demo_jobs(app):
     for kw in ["Python", "Java", "前端", "数据分析"]:
         items = mock_data.generate_jobs(kw, pages=2)
         for it in items:
-            it["boss_job_id"] = "seed-" + it["boss_job_id"]
+            it["source_job_id"] = "seed-" + it["source_job_id"]
         saved += _seed_save(items)
     get_logger().info("已生成演示职位数据 %s 条", saved)
 
@@ -161,7 +161,7 @@ def _seed_save(items):
                                           if "人" in t), None))
             db.session.add(company)
             db.session.flush()
-        job = Job(boss_job_id=it["boss_job_id"], title=it["title"],
+        job = Job(source_job_id=it["source_job_id"], title=it["title"],
                   salary_text=it["salary_text"], salary_min=None, salary_max=None,
                   city=it["city"], district=it["district"],
                   job_tags=json.dumps(it.get("job_tags") or [], ensure_ascii=False),

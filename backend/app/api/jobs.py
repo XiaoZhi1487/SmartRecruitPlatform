@@ -131,7 +131,7 @@ def my_favorites():
 @bp.get("/<int:job_id>/redirect")
 @jwt_required(optional=True)
 def jump_to_source(job_id):
-    """一键跳转 Boss直聘 原文页面"""
+    """一键跳转 前程无忧 原文页面"""
     job = db.session.get(Job, job_id)
     if not job:
         return fail("职位不存在", http_status=404)

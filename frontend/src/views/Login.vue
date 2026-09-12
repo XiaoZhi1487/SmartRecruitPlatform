@@ -10,7 +10,7 @@
       <div class="feature-list">
         <div class="feature"><el-icon><DataAnalysis /></el-icon> 基于多维匹配度的智能岗位推荐</div>
         <div class="feature"><el-icon><ChatDotRound /></el-icon> DeepSeek AI 职业对话与简历优化</div>
-        <div class="feature"><el-icon><Monitor /></el-icon> 多线程爬虫实时采集 Boss直聘 职位</div>
+        <div class="feature"><el-icon><Monitor /></el-icon> 多线程爬虫实时采集 前程无忧 职位</div>
         <div class="feature"><el-icon><Document /></el-icon> PDF / Word 简历解析，一键结构化</div>
       </div>
       <div class="auth-left-foot">2026 · 毕业设计项目 · Flask + Vue3 + DeepSeek</div>

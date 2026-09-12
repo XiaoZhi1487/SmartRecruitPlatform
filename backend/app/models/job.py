@@ -32,8 +32,8 @@ class Job(db.Model):
     __tablename__ = "jobs"
 
     id = db.Column(db.Integer, primary_key=True)
-    # Boss直聘职位唯一标识，用于去重与增量更新
-    boss_job_id = db.Column(db.String(64), unique=True, index=True, nullable=True)
+    # 来源网站职位唯一标识，用于去重与增量更新
+    source_job_id = db.Column(db.String(64), unique=True, index=True, nullable=True)
     title = db.Column(db.String(128), nullable=False, index=True)
     salary_text = db.Column(db.String(32), nullable=True)
     salary_min = db.Column(db.Integer, nullable=True)          # K/月
@@ -62,7 +62,7 @@ class Job(db.Model):
     def to_dict(self, brief=False):
         data = {
             "id": self.id,
-            "boss_job_id": self.boss_job_id,
+            "source_job_id": self.source_job_id,
             "title": self.title,
             "salary_text": self.salary_text,
             "salary_min": self.salary_min,

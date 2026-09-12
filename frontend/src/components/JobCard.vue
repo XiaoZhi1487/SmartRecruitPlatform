@@ -24,7 +24,7 @@
     </div>
     <div class="job-foot">
       <span class="source-link" @click.stop>
-        <el-link v-if="job.link" type="primary" :underline="false" @click.stop="openSource">
+        <el-link v-if="job.link" type="primary" underline="never" @click.stop="openSource">
           <el-icon><Position /></el-icon>查看原文
         </el-link>
       </span>

@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <h2 class="zp-page-title"><el-icon><Monitor /></el-icon> 爬虫控制台</h2>
-    <p class="zp-page-sub">Selenium 多线程爬取 Boss直聘 职位 · 反爬策略 · 结构变更监测</p>
+    <p class="zp-page-sub">Selenium 多线程爬取 前程无忧 职位 · 反爬策略 · 结构变更监测</p>
 
     <!-- 任务表单 -->
     <section class="crawl-form zp-card">
@@ -11,8 +11,33 @@
           <el-input v-model="form.keywords" placeholder="如：Python, Java, 数据分析, 前端" />
         </div>
         <div class="form-item">
-          <label>城市代码（留空为全国）</label>
-          <el-input v-model="form.city" placeholder="如：101010100(北京)" />
+          <label>工作地点（必选，爬取该城市的职位）</label>
+          <el-select v-model="form.city" filterable allow-create clearable
+                     placeholder="请选择要爬取的城市" style="width: 100%">
+            <el-option label="北京" value="010000" />
+            <el-option label="上海" value="020000" />
+            <el-option label="广州" value="030200" />
+            <el-option label="深圳" value="040000" />
+            <el-option label="杭州" value="080200" />
+            <el-option label="南京" value="070200" />
+            <el-option label="苏州" value="070300" />
+            <el-option label="成都" value="090200" />
+            <el-option label="武汉" value="180200" />
+            <el-option label="西安" value="200200" />
+            <el-option label="重庆" value="060000" />
+            <el-option label="东莞" value="030800" />
+            <el-option label="南宁" value="140200" />
+            <el-option label="柳州" value="140400" />
+            <el-option label="福州" value="110200" />
+            <el-option label="济南" value="120200" />
+            <el-option label="青岛" value="120300" />
+            <el-option label="合肥" value="150200" />
+            <el-option label="郑州" value="170200" />
+            <el-option label="长沙" value="190200" />
+            <el-option label="沈阳" value="230200" />
+            <el-option label="昆明" value="250200" />
+            <el-option label="贵阳" value="260200" />
+          </el-select>
         </div>
         <div class="form-item">
           <label>爬取页数（每页10条）</label>
@@ -25,12 +50,21 @@
         <div class="form-item">
           <label>爬取模式</label>
           <el-radio-group v-model="form.mode">
-            <el-radio-button label="auto">自动</el-radio-button>
-            <el-radio-button label="real">真实</el-radio-button>
-            <el-radio-button label="mock">模拟</el-radio-button>
+            <el-radio-button value="auto">自动</el-radio-button>
+            <el-radio-button value="real">真实</el-radio-button>
+            <el-radio-button value="mock">模拟</el-radio-button>
           </el-radio-group>
         </div>
+        <div class="form-item">
+          <label>浏览器窗口</label>
+          <el-checkbox v-model="form.show_browser">显示浏览器（便于人工处理验证码）</el-checkbox>
+        </div>
       </div>
+      <el-alert v-if="form.mode === 'real' || form.mode === 'auto'" type="info" :closable="false"
+                class="crawl-tip" show-icon>
+        前程无忧无需登录即可爬取。请选择<b>具体城市</b>（如柳州、上海），将爬取该城市的前程无忧职位。
+        命中验证码时会弹出浏览器窗口，请在窗口中完成验证后自动继续；真实爬取无产出时自动降级为模拟数据。
+      </el-alert>
       <div class="form-actions">
         <el-button type="primary" class="zp-btn-gradient" :disabled="running"
                    :loading="starting" @click="startCrawl">
@@ -121,7 +155,7 @@ import { computed, onBeforeUnmount, onMounted, reactive, ref } from 'vue'
 import { ElMessage } from 'element-plus'
 import { crawlApi } from '../api'
 
-const form = reactive({ keywords: 'Python, Java, 数据分析', city: '', pages: 3, threads: 3, mode: 'auto' })
+const form = reactive({ keywords: 'Python, Java, 数据分析', city: '', pages: 3, threads: 3, mode: 'auto', show_browser: true })
 const starting = ref(false)
 const running = ref(false)
 const stats = reactive({ found: 0, saved: 0, captcha: 0, queue_size: 0 })
@@ -168,9 +202,13 @@ async function startCrawl() {
     ElMessage.warning('请填写关键字')
     return
   }
+  if (!form.city) {
+    ElMessage.warning('请选择要爬取的城市')
+    return
+  }
   starting.value = true
   try {
-    await crawlApi.start(form)
+    await crawlApi.start({ ...form, headless: !form.show_browser })
     ElMessage.success('爬取任务已启动')
     refresh()
   } finally {

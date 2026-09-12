@@ -31,8 +31,8 @@
       <div class="sort-group">
         <span class="sort-label">排序：</span>
         <el-radio-group v-model="query.sort" @change="search">
-          <el-radio-button label="latest">最新发布</el-radio-button>
-          <el-radio-button label="salary">薪资优先</el-radio-button>
+          <el-radio-button value="latest">最新发布</el-radio-button>
+          <el-radio-button value="salary">薪资优先</el-radio-button>
         </el-radio-group>
       </div>
       <span class="total-tip">共 {{ total }} 个职位</span>

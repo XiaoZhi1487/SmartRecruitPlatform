@@ -75,7 +75,7 @@
         <div class="panel-title"><el-icon><DataBoard /></el-icon> 数据管理</div>
       </div>
       <div class="data-ops">
-        <el-input v-model="cleanupSource" placeholder="按来源清理，如 boss（留空清理全部）" style="width: 260px" />
+        <el-input v-model="cleanupSource" placeholder="按来源清理，如 crawler/mock（留空清理全部）" style="width: 260px" />
         <el-button type="danger" plain :loading="cleaning" @click="cleanupJobs">
           <el-icon><Delete /></el-icon> 清理职位数据
         </el-button>
