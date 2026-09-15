@@ -74,6 +74,8 @@ def _build_options(engine, ua, proxy, headless, browser_path=None):
         options.add_argument(arg)
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option("useAutomationExtension", False)
+    # eager：DOM 解析完成即返回，避免 51job 的 WAF 挑战页长期不触发 load 事件导致 driver.get() 卡死
+    options.page_load_strategy = "eager"
     # 显式指定浏览器二进制，避免 Selenium Manager 探测失败
     browser_path = browser_path or _find_browser(engine)
     if browser_path and os.path.exists(browser_path):
@@ -118,7 +120,8 @@ def create_driver(ua=None, proxy=None, headless=True, engine="edge",
 
     driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument",
                            {"source": _ANTI_DETECT_JS})
-    driver.implicitly_wait(wait_timeout)
+    # 隐式等待设小：列表已用显式 sleep 等待渲染，避免 find_elements 长时间阻塞拖慢流程
+    driver.implicitly_wait(2)
     return driver
 
 
@@ -138,6 +141,7 @@ def _attach_driver(engine, port, driver_path=None, wait_timeout=15):
     """
     options = EdgeOptions() if engine == "edge" else ChromeOptions()
     options.add_experimental_option("debuggerAddress", f"127.0.0.1:{port}")
+    options.page_load_strategy = "eager"
     service = None
     if driver_path and os.path.exists(driver_path):
         service = (EdgeService(executable_path=driver_path) if engine == "edge"
@@ -146,18 +150,32 @@ def _attach_driver(engine, port, driver_path=None, wait_timeout=15):
               else webdriver.Chrome(options=options, service=service))
     driver.attach_mode = True
     driver.set_page_load_timeout(30)
-    driver.implicitly_wait(wait_timeout)
+    driver.implicitly_wait(2)
+    # 立即切换到专属爬虫标签页：附加模式下驱动默认控制浏览器"当前活动标签页"，
+    # 若不加处理，后续 driver.get() 会直接导航用户正在看的页面。这里新建一个
+    # 专属标签页并切过去，之后所有爬取操作都只发生在该标签页（及逐页新建的标签页）上。
+    try:
+        driver.switch_to.new_window("tab")
+        driver.crawler_handle = driver.current_window_handle
+    except Exception as e:
+        logger.warning("附加后新建专属标签页失败: %s", e)
+        driver.crawler_handle = None
     return driver
 
 
 def close_driver(driver):
-    """释放驱动。附加模式下只关闭当前标签页，绝不退出用户的浏览器实例。"""
+    """释放驱动。附加模式下只关闭爬虫专属标签页，绝不退出用户的浏览器实例。"""
     if driver is None:
         return
     try:
         if getattr(driver, "attach_mode", False):
             try:
-                driver.close()  # 只关爬虫用到的标签页
+                crawler = getattr(driver, "crawler_handle", None)
+                handles = driver.window_handles
+                # 只关爬虫自己的专属标签页（逐页临时标签页由调用方负责关闭）
+                if crawler and crawler in handles:
+                    driver.switch_to.window(crawler)
+                    driver.close()
             except Exception as e:
                 logger.warning("关闭附加标签页失败: %s", e)
             return

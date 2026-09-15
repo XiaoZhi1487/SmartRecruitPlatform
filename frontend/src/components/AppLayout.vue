@@ -3,7 +3,7 @@
     <!-- 侧边栏 -->
     <aside class="sidebar" :class="{ collapsed: collapsed }">
       <div class="logo">
-        <div class="logo-badge">智</div>
+        <img src="/logo.png" class="logo-img" alt="智聘通" />
         <span v-if="!collapsed" class="logo-text">智聘通</span>
       </div>
 
@@ -30,11 +30,6 @@
           <span class="crumb">{{ route.meta.title || '智聘通' }}</span>
         </div>
         <div class="topbar-right">
-          <el-input v-model="searchText" placeholder="搜索职位/公司" clearable
-                    class="top-search" @keyup.enter="goSearch"
-                    :prefix-icon="Search" />
-          <el-button type="primary" class="zp-btn-gradient" :icon="Search" @click="goSearch">搜索</el-button>
-
           <template v-if="store.isLoggedIn">
             <el-dropdown @command="handleCommand">
               <span class="user-chip">
@@ -67,20 +62,20 @@
 </template>
 
 <script setup>
-import { computed, ref, watch } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { Search } from '@element-plus/icons-vue'
 import { useUserStore } from '../stores/user'
 
 const route = useRoute()
 const router = useRouter()
 const store = useUserStore()
 const collapsed = ref(false)
-const searchText = ref('')
 
 const menus = computed(() => {
   const base = [
     { path: '/home', label: '职位大厅', icon: 'HomeFilled' },
+    { path: '/analysis', label: '市场分析', icon: 'TrendCharts' },
+    { path: '/favorites', label: '我的收藏', icon: 'Star' },
     { path: '/recommend', label: '智能推荐', icon: 'DataAnalysis' },
     { path: '/chat', label: 'AI职业助手', icon: 'ChatDotRound' },
     { path: '/crawler', label: '爬虫控制台', icon: 'Monitor' },
@@ -100,10 +95,6 @@ function isActive(item) {
   return route.path.startsWith(item.path)
 }
 
-function goSearch() {
-  router.push({ path: '/home', query: { keyword: searchText.value } })
-}
-
 function handleCommand(cmd) {
   if (cmd === 'logout') {
     store.logout()
@@ -112,8 +103,6 @@ function handleCommand(cmd) {
     router.push(`/${cmd}`)
   }
 }
-
-watch(() => route.query.keyword, v => { searchText.value = v || '' }, { immediate: true })
 </script>
 
 <style scoped>
@@ -143,18 +132,12 @@ watch(() => route.query.keyword, v => { searchText.value = v || '' }, { immediat
   padding: 18px 16px;
   border-bottom: 1px solid rgba(148, 163, 184, 0.15);
 }
-.logo-badge {
-  width: 36px;
-  height: 36px;
+.logo-img {
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
   border-radius: 10px;
-  background: var(--zp-gradient);
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
 }
 .logo-text {
   color: #fff;
@@ -228,9 +211,6 @@ watch(() => route.query.keyword, v => { searchText.value = v || '' }, { immediat
   display: flex;
   align-items: center;
   gap: 10px;
-}
-.top-search {
-  width: 260px;
 }
 
 .user-chip {

@@ -141,7 +141,7 @@ def delete_resume(resume_id):
 @bp.post("/<int:resume_id>/optimize")
 @jwt_required()
 def optimize_resume(resume_id):
-    """AI 简历优化建议"""
+    """AI 简历优化建议（同时写入「AI 职业助手」新对话）"""
     user_id = int(get_jwt_identity())
     resume = Resume.query.filter_by(id=resume_id, user_id=user_id).first()
     if not resume:
@@ -158,6 +158,17 @@ def optimize_resume(resume_id):
         result = ai_service.optimize_resume(resume.raw_text, job_title)
         if not result or "_raw" in result:
             return fail("AI 优化分析失败，请稍后重试")
+        from app.services.chat_service import save_ai_exchange, format_resume_optimize
+        try:
+            save_ai_exchange(
+                user_id,
+                title=f"简历优化-{resume.file_name}",
+                user_content=f"请对我的简历进行 AI 优化分析，目标岗位：{job_title or '未指定'}。",
+                assistant_content=format_resume_optimize(result),
+            )
+        except Exception as e:
+            db.session.rollback()
+            logger.warning("写入AI对话失败: %s", e)
         return ok(result)
     except Exception as e:
         return fail(f"AI 服务调用失败: {e}", http_status=503)

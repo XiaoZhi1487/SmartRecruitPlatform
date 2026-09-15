@@ -1,9 +1,10 @@
-"""爬虫控制接口：启动/停止/状态/日志/结构监测/任务历史"""
+"""爬虫控制接口：启动/停止/状态/日志/结构监测/任务历史/数据清空"""
 from flask import Blueprint, request
 from flask_jwt_extended import jwt_required
 
 from app.extensions import db
-from app.models.interaction import CrawlTask, CrawlLog
+from app.models.interaction import CrawlTask, CrawlLog, FavoriteJob
+from app.models.job import Job
 from app.services.crawler import crawl_manager
 from app.utils.response import ok, fail, page_result
 
@@ -103,3 +104,21 @@ def structure_checks():
     items = SiteStructureCheck.query.order_by(
         SiteStructureCheck.created_at.desc()).limit(50).all()
     return ok([i.to_dict() for i in items])
+
+
+@bp.post("/clear")
+@jwt_required()
+def clear_crawl_data():
+    """清空爬取数据（模拟/真实爬取产生的职位），所有登录用户可用。
+    仅删除 source 为 crawler/mock 的数据，保留种子演示数据；同时清理相关收藏。"""
+    if crawl_manager.running:
+        return fail("爬取任务运行中，请先停止再清空数据", http_status=409)
+    ids = [r[0] for r in db.session.query(Job.id).filter(
+        Job.source.in_(["crawler", "mock"])).all()]
+    if not ids:
+        return ok({"deleted": 0}, "没有可清空的爬取数据")
+    FavoriteJob.query.filter(FavoriteJob.job_id.in_(ids)).delete(
+        synchronize_session=False)
+    deleted = Job.query.filter(Job.id.in_(ids)).delete(synchronize_session=False)
+    db.session.commit()
+    return ok({"deleted": deleted}, f"已清空 {deleted} 条爬取数据")

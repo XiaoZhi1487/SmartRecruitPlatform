@@ -10,9 +10,6 @@
           <el-input v-model="query.keyword" placeholder="输入职位关键词，如：Python、数据分析"
                     class="search-input" :prefix-icon="Search" clearable
                     @keyup.enter="search" />
-          <el-select v-model="query.city" placeholder="不限城市" clearable class="city-select">
-            <el-option v-for="c in cities" :key="c" :label="c" :value="c" />
-          </el-select>
           <el-button type="primary" class="zp-btn-gradient search-btn" @click="search">
             <el-icon><Search /></el-icon> 搜索职位
           </el-button>
@@ -28,11 +25,31 @@
 
     <!-- 筛选 -->
     <div class="filter-bar zp-card">
+      <div class="filter-group">
+        <span class="filter-label">筛选：</span>
+        <el-select v-model="query.city" placeholder="城市" clearable class="filter-select" @change="search">
+          <el-option v-for="c in cities" :key="c" :label="c" :value="c" />
+        </el-select>
+        <el-select v-model="query.experience" placeholder="经验" clearable class="filter-select" @change="search">
+          <el-option v-for="e in expOptions" :key="e" :label="e" :value="e" />
+        </el-select>
+        <el-select v-model="query.education" placeholder="学历" clearable class="filter-select" @change="search">
+          <el-option v-for="e in eduOptions" :key="e" :label="e" :value="e" />
+        </el-select>
+        <el-select v-model="query.source" placeholder="来源" clearable class="filter-select" @change="search">
+          <el-option label="内置" value="seed" />
+          <el-option label="模拟" value="mock" />
+          <el-option label="爬取" value="crawler" />
+        </el-select>
+        <el-button text type="primary" @click="resetFilters"><el-icon><RefreshLeft /></el-icon> 重置</el-button>
+      </div>
       <div class="sort-group">
         <span class="sort-label">排序：</span>
         <el-radio-group v-model="query.sort" @change="search">
           <el-radio-button value="latest">最新发布</el-radio-button>
-          <el-radio-button value="salary">薪资优先</el-radio-button>
+          <el-radio-button value="salary">薪资最高</el-radio-button>
+          <el-radio-button value="salary_asc">薪资最低</el-radio-button>
+          <el-radio-button value="company">公司名称</el-radio-button>
         </el-radio-group>
       </div>
       <span class="total-tip">共 {{ total }} 个职位</span>
@@ -50,19 +67,12 @@
       <el-pagination background layout="prev, pager, next" :total="total"
                      :page-size="pageSize" :current-page="page" @current-change="onPage" />
     </div>
-
-    <!-- 薪资分析 -->
-    <section class="chart-section zp-card" v-if="salaryData.length">
-      <h3 class="chart-title"><el-icon><TrendCharts /></el-icon> 各城市平均薪资（K/月）</h3>
-      <div ref="chartRef" class="chart"></div>
-    </section>
   </div>
 </template>
 
 <script setup>
 import { onMounted, reactive, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import * as echarts from 'echarts'
 import { Search } from '@element-plus/icons-vue'
 import JobCard from '../components/JobCard.vue'
 import { jobApi } from '../api'
@@ -83,11 +93,11 @@ const heroStats = ref([
   { label: '入驻公司', value: '-' },
   { label: '覆盖城市', value: '-' }
 ])
-const salaryData = ref([])
-const chartRef = ref(null)
-let chart = null
 
-const query = reactive({ keyword: '', city: '', sort: 'latest' })
+const expOptions = ['经验不限', '在校生/应届生', '1年以下', '1-3年', '3-5年', '5-10年', '10年以上']
+const eduOptions = ['学历不限', '大专', '本科', '硕士', '博士']
+
+const query = reactive({ keyword: '', city: '', experience: '', education: '', source: '', sort: 'latest' })
 
 onMounted(async () => {
   query.keyword = route.query.keyword || ''
@@ -98,7 +108,7 @@ async function loadJobs() {
   loading.value = true
   try {
     const data = await jobApi.list({ ...query, page: page.value, page_size: pageSize })
-    jobs.value = data.items.map(j => ({ ...j, is_favorite: false }))
+    jobs.value = data.items
     total.value = data.total
   } finally {
     loading.value = false
@@ -114,33 +124,19 @@ async function loadStats() {
     const data = await jobApi.stats()
     heroStats.value = [
       { label: '在招职位', value: data.total_jobs },
-      { label: '覆盖城市', value: data.city_salary.length },
+      { label: '覆盖城市', value: data.covered_cities ?? data.city_salary.length },
       { label: '热门公司', value: data.top_companies.length }
     ]
-    salaryData.value = data.city_salary || []
-    renderChart()
   } catch (e) { /* ignore */ }
 }
 
-function renderChart() {
-  if (!chartRef.value) return
-  if (!chart) chart = echarts.init(chartRef.value)
-  chart.setOption({
-    tooltip: { trigger: 'axis' },
-    legend: { data: ['平均最低', '平均最高'] },
-    grid: { left: 40, right: 20, top: 40, bottom: 30 },
-    xAxis: { type: 'category', data: salaryData.value.map(d => d.city) },
-    yAxis: { type: 'value', name: 'K/月' },
-    series: [
-      { name: '平均最低', type: 'bar', data: salaryData.value.map(d => d.avg_min),
-        itemStyle: { color: '#818cf8', borderRadius: [4, 4, 0, 0] }, barWidth: 18 },
-      { name: '平均最高', type: 'bar', data: salaryData.value.map(d => d.avg_max),
-        itemStyle: { color: '#4f46e5', borderRadius: [4, 4, 0, 0] }, barWidth: 18 }
-    ]
-  })
+function search() {
+  page.value = 1
+  loadJobs()
 }
 
-function search() {
+function resetFilters() {
+  Object.assign(query, { keyword: '', city: '', experience: '', education: '', source: '' })
   page.value = 1
   loadJobs()
 }
@@ -211,9 +207,6 @@ async function toggleFavorite(job) {
 .search-input :deep(.el-input__wrapper) {
   border-radius: 10px;
 }
-.city-select {
-  width: 140px;
-}
 .search-btn {
   height: 40px;
   padding: 0 28px;
@@ -238,10 +231,30 @@ async function toggleFavorite(job) {
 
 .filter-bar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 10px 16px;
   padding: 12px 20px;
   margin-bottom: 14px;
+}
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.filter-label {
+  color: var(--zp-text-secondary);
+  font-size: 13px;
+}
+.filter-select {
+  width: 120px;
+}
+.sort-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .sort-label {
   color: var(--zp-text-secondary);
@@ -263,20 +276,5 @@ async function toggleFavorite(job) {
   display: flex;
   justify-content: center;
   margin: 20px 0;
-}
-
-.chart-section {
-  margin-top: 20px;
-  padding: 20px;
-}
-.chart-title {
-  margin: 0 0 16px;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.chart {
-  height: 300px;
 }
 </style>

@@ -7,7 +7,7 @@ from app.extensions import db
 from app.models.user import User
 from app.models.job import Job, Company
 from app.models.resume import Resume
-from app.models.interaction import ChatSession, CrawlTask
+from app.models.interaction import ChatSession, CrawlTask, FavoriteJob
 from app.utils.response import ok, fail, page_result
 from app.utils.decorators import admin_required
 from app.utils.validators import is_valid_username, is_valid_email, check_password_strength
@@ -105,13 +105,19 @@ def delete_job(job_id):
 @bp.post("/jobs/cleanup")
 @admin_required
 def cleanup_jobs():
-    """清理无效职位（按 source 或关键字）"""
+    """清理职位数据（按 source：seed=内置 / mock=模拟 / crawler=爬取）"""
     data = request.get_json(silent=True) or {}
     source = data.get("source")
     query = Job.query
     if source:
         query = query.filter_by(source=source)
-    deleted = query.delete(synchronize_session=False)
+    ids = [r[0] for r in query.with_entities(Job.id).all()]
+    if not ids:
+        return ok({"deleted": 0}, "没有匹配的职位数据")
+    # 一并清理相关收藏，避免脏数据
+    FavoriteJob.query.filter(FavoriteJob.job_id.in_(ids)).delete(
+        synchronize_session=False)
+    deleted = Job.query.filter(Job.id.in_(ids)).delete(synchronize_session=False)
     db.session.commit()
     return ok({"deleted": deleted}, f"已清理 {deleted} 条职位数据")
 

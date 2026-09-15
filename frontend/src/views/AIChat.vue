@@ -57,8 +57,9 @@
 
 <script setup>
 import { nextTick, onMounted, ref } from 'vue'
-import { ElMessage, ElMessageBox } from 'element-plus'
+import { ElMessage } from 'element-plus'
 import { chatApi } from '../api'
+import { toDate } from '../utils/date'
 
 const sessions = ref([])
 const currentId = ref(null)
@@ -136,8 +137,8 @@ function scrollBottom() {
 }
 
 function fmtTime(s) {
-  if (!s) return ''
-  const d = new Date(s)
+  const d = toDate(s)
+  if (!d) return ''
   const pad = n => String(n).padStart(2, '0')
   return `${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`
 }

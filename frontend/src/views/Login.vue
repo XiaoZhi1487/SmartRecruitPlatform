@@ -2,7 +2,7 @@
   <div class="auth-page">
     <div class="auth-left">
       <div class="brand">
-        <div class="brand-badge">智</div>
+        <img src="/logo.png" class="brand-badge" alt="智聘通" />
         <span class="brand-name">智聘通</span>
       </div>
       <h1 class="slogan">发现你的理想职业</h1>
@@ -119,13 +119,7 @@ async function onSubmit() {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(6px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  font-weight: 700;
+  object-fit: cover;
 }
 .brand-name {
   font-size: 24px;

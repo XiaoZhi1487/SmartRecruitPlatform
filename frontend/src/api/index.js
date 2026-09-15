@@ -32,6 +32,7 @@ export const jobApi = {
   list: params => request.get('/jobs', { params }),
   cities: () => request.get('/jobs/cities'),
   stats: () => request.get('/jobs/stats'),
+  analysis: () => request.get('/jobs/analysis'),
   detail: id => request.get(`/jobs/${id}`),
   favorite: id => request.post(`/jobs/${id}/favorite`),
   unfavorite: id => request.delete(`/jobs/${id}/favorite`),
@@ -57,7 +58,8 @@ export const crawlApi = {
   logs: params => request.get('/crawl/logs', { params }),
   tasks: params => request.get('/crawl/tasks', { params }),
   structureCheck: () => request.post('/crawl/structure-check'),
-  structureChecks: () => request.get('/crawl/structure-checks')
+  structureChecks: () => request.get('/crawl/structure-checks'),
+  clear: () => request.post('/crawl/clear')
 }
 
 // ============ AI对话 ============

@@ -162,7 +162,9 @@ def _seed_save(items):
             db.session.add(company)
             db.session.flush()
         job = Job(source_job_id=it["source_job_id"], title=it["title"],
-                  salary_text=it["salary_text"], salary_min=None, salary_max=None,
+                  salary_text=it["salary_text"],
+                  salary_min=it.get("salary_min") or None,
+                  salary_max=it.get("salary_max") or None,
                   city=it["city"], district=it["district"],
                   job_tags=json.dumps(it.get("job_tags") or [], ensure_ascii=False),
                   company_name=it["company_name"], company_id=company.id,

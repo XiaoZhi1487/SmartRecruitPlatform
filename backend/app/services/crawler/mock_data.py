@@ -10,7 +10,7 @@ DISTRICTS = {"北京": ["海淀区", "朝阳区", "西城区"], "上海": ["浦�
              "深圳": ["南山区", "福田区"], "杭州": ["西湖区", "滨江区"], "广州": ["天河区", "海珠区"],
              "成都": ["高新区", "锦江区"], "武汉": ["洪山区", "光谷"], "南京": ["建邺区", "江宁区"],
              "西安": ["高新区", "雁塔区"], "苏州": ["工业园区", "高新区"]}
-EXPERIENCES = ["在校/应届", "1年以内", "1-3年", "3-5年", "5-10年"]
+EXPERIENCES = ["在校生/应届生", "1年以下", "1-3年", "3-5年", "5-10年"]
 EDUCATIONS = ["大专", "本科", "硕士"]
 COMPANY_SUFFIX = ["科技有限公司", "信息技术有限公司", "网络科技公司", "软件有限公司", "数据服务有限公司", "互联网科技有限公司"]
 INDUSTRIES = ["互联网", "人工智能", "大数据", "电子商务", "金融科技", "企业服务", "游戏", "教育科技"]
@@ -66,6 +66,8 @@ def generate_jobs(keyword, pages=3, city=None) -> list:
                 "source_job_id": f"mock-{keyword}-{idx}",
                 "title": title,
                 "salary_text": f"{s_min}-{s_max}K",
+                "salary_min": s_min,
+                "salary_max": s_max,
                 "city": c,
                 "district": r.choice(DISTRICTS.get(c, ["城区"])),
                 "job_tags": tags,

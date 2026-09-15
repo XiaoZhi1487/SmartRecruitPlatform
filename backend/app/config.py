@@ -103,11 +103,13 @@ class Config:
         "job_link": ".joblist-item-job",
     }
     # 详情页选择器：优先 msearch 手机详情（服务端渲染，可免验证码读取）
+    # jobinfoDesModule 为 msearch 详情页职位描述容器（已验证有效）
     CRAWL_DETAIL_SELECTORS = {
-        "job_desc": ".job_msg, .bmsg, .jd-content, [class*=job-detail], "
-                    ".job_detail, [class*=jobmsg], .tCompany_main .msg",
+        "job_desc": ".jobinfoDesModule, .job_msg, .bmsg, .jd-content, "
+                    "[class*=job-detail], .job_detail, [class*=jobmsg], "
+                    ".tCompany_main .msg",
         "job_bonus": ".job_msg .t1, .bmsg .t1, .welfare",
-        "company_name": ".cname, .tCompany_main h1",
+        "company_name": ".cname, .tCompany_main h1, .c_info .cname",
     }
     CRAWL_STRUCTURE_CHECK_URL = "https://we.51job.com/pc/search?jobArea=000000&keyword=Python&searchType=2&pageNum=1"
     # 定时爬取关键字（每6小时任务，指定具体城市爬取，不做全国）

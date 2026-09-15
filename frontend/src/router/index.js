@@ -10,6 +10,8 @@ const routes = [
     redirect: '/home',
     children: [
       { path: 'home', name: 'home', component: () => import('../views/Home.vue'), meta: { title: '职位大厅' } },
+      { path: 'analysis', name: 'analysis', component: () => import('../views/Analysis.vue'), meta: { title: '市场分析' } },
+      { path: 'favorites', name: 'favorites', component: () => import('../views/Favorites.vue'), meta: { title: '我的收藏', auth: true } },
       { path: 'job/:id', name: 'jobDetail', component: () => import('../views/JobDetail.vue'), meta: { title: '职位详情' } },
       { path: 'recommend', name: 'recommend', component: () => import('../views/Recommend.vue'), meta: { title: '智能推荐', auth: true } },
       { path: 'chat', name: 'chat', component: () => import('../views/AIChat.vue'), meta: { title: 'AI职业助手', auth: true } },

@@ -102,20 +102,32 @@ def extract_job_id(link: str) -> str:
 
 def parse_salary(text: str) -> tuple:
     """解析薪资文本为 (min_k, max_k)，单位统一为 K/月。
-    支持：20-30K、1.2-2.3万/月、4-8千/月、15K以上、面议
+    支持：20-30K、1.2-2.3万/月、4-8千/月、9千-1.2万、15K以上、面议
     """
     text = (text or "").replace("·", " ").strip()
     if not text:
         return None, None
-    # 区间格式：数字 - 数字 [万|千]
-    m = re.search(r"([\d.]+)\s*[-~]\s*([\d.]+)\s*(万|千)?", text)
+
+    def _to_k(num, unit):
+        """数值 × 单位 → K/月（万→×10，千/K 及无单位视为 K）"""
+        num = float(num)
+        if unit in ("万", "w", "W"):
+            return num * 10
+        return num
+
+    # 区间格式：数字[单位] - 数字[单位]（单位可出现在任一侧或两侧，如 "9千-1.2万"）
+    m = re.search(
+        r"([\d.]+)\s*(万|千|k|K|w|W)?\s*[-~到]\s*([\d.]+)\s*(万|千|k|K|w|W)?", text)
     if m:
-        lo, hi, unit = float(m.group(1)), float(m.group(2)), m.group(3) or ""
-        if unit == "万":       # 1.2-2.3万/月 → 12-23K
-            lo, hi = lo * 10, hi * 10
-        elif unit == "千":     # 4-8千/月 → 4-8K
-            pass
+        u1, u2 = m.group(2) or "", m.group(4) or m.group(2) or ""
+        lo = _to_k(m.group(1), u1 or u2)
+        hi = _to_k(m.group(3), u2)
         return int(lo), int(hi)
+    # 单值带单位：如 "1.2万以上"、"8千以上"
+    m2 = re.search(r"([\d.]+)\s*(万|千|k|K|w|W)", text)
+    if m2:
+        n = _to_k(m2.group(1), m2.group(2))
+        return int(n), int(n)
     nums = re.findall(r"\d+\.?\d*", text)
     if len(nums) >= 2:
         return int(float(nums[0])), int(float(nums[1]))

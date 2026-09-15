@@ -98,6 +98,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { resumeApi } from '../api'
+import { fmtTime } from '../utils/date'
 
 const resumes = ref([])
 const loading = ref(false)
@@ -172,10 +173,6 @@ async function removeResume(r) {
   await resumeApi.remove(r.id)
   ElMessage.success('已删除')
   load()
-}
-
-function fmtTime(s) {
-  return s ? new Date(s).toLocaleString('zh-CN', { hour12: false }) : '-'
 }
 </script>
 

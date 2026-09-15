@@ -75,9 +75,18 @@
         <div class="panel-title"><el-icon><DataBoard /></el-icon> 数据管理</div>
       </div>
       <div class="data-ops">
-        <el-input v-model="cleanupSource" placeholder="按来源清理，如 crawler/mock（留空清理全部）" style="width: 260px" />
+        <el-button type="danger" plain :loading="cleaning" @click="cleanupBySource('seed')">
+          <el-icon><Delete /></el-icon> 删除内置职位
+        </el-button>
+        <el-button type="danger" plain :loading="cleaning" @click="cleanupBySource('mock')">
+          <el-icon><Delete /></el-icon> 删除模拟职位
+        </el-button>
+        <el-button type="danger" plain :loading="cleaning" @click="cleanupBySource('crawler')">
+          <el-icon><Delete /></el-icon> 删除爬取职位
+        </el-button>
+        <el-input v-model="cleanupSource" placeholder="按来源清理，如 crawler/mock（留空清理全部）" style="width: 280px" />
         <el-button type="danger" plain :loading="cleaning" @click="cleanupJobs">
-          <el-icon><Delete /></el-icon> 清理职位数据
+          <el-icon><Delete /></el-icon> 按来源清理
         </el-button>
       </div>
     </section>
@@ -134,6 +143,7 @@
 import { onMounted, reactive, ref } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { adminApi } from '../api'
+import { fmtTime } from '../utils/date'
 
 const statCards = ref([])
 const users = ref([])
@@ -235,15 +245,28 @@ async function cleanupJobs() {
   }
 }
 
+async function cleanupBySource(source) {
+  const label = { seed: '内置', mock: '模拟', crawler: '爬取' }[source] || source
+  try {
+    await ElMessageBox.confirm(`确认删除所有【${label}职位】？该操作不可恢复。`, '危险操作', { type: 'warning' })
+  } catch (e) {
+    return
+  }
+  cleaning.value = true
+  try {
+    const res = await adminApi.cleanupJobs({ source })
+    ElMessage.success(`已删除 ${res.deleted} 条${label}职位`)
+    loadStats()
+  } finally {
+    cleaning.value = false
+  }
+}
+
 async function loadTasks() {
   try {
     const res = await adminApi.crawlTasks({ page: 1, page_size: 10 })
     tasks.value = res.items
   } catch (e) { /* ignore */ }
-}
-
-function fmtTime(s) {
-  return s ? new Date(s).toLocaleString('zh-CN', { hour12: false }) : '-'
 }
 </script>
 
