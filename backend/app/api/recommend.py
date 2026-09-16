@@ -4,6 +4,7 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
 
 from app.models.user import User
 from app.models.job import Job
+from app.extensions import db
 from app.services.recommend_service import (
     recommend_jobs_for_user, match_candidates_for_job, get_user_context,
 )
@@ -15,14 +16,36 @@ bp = Blueprint("recommend", __name__)
 @bp.get("/jobs")
 @jwt_required()
 def recommend_jobs():
-    """基于用户画像的智能岗位推荐"""
+    """基于用户画像 + 行为反馈的动态权重智能岗位推荐"""
     user_id = int(get_jwt_identity())
     limit = min(int(request.args.get("limit", 10)), 30)
     try:
-        result = recommend_jobs_for_user(user_id, limit=limit)
+        items, dyn = recommend_jobs_for_user(user_id, limit=limit)
     except Exception as e:
         return fail(f"推荐计算失败: {e}", http_status=500)
-    return ok({"items": result, "total": len(result)})
+    return ok({"items": items, "total": len(items), "weights": dyn})
+
+
+@bp.post("/feedback")
+@jwt_required()
+def feedback():
+    """记录用户行为反馈（browse/view/favorite/apply），用于个性化权重学习"""
+    from app.models.interaction import UserFeedback
+    data = request.get_json(silent=True) or {}
+    job_id = data.get("job_id")
+    action = (data.get("action") or "").strip().lower()
+    if not job_id or action not in ("browse", "view", "favorite", "apply"):
+        return fail("参数错误：job_id、action 必填且 action 需为 browse/view/favorite/apply")
+    user_id = int(get_jwt_identity())
+    job = db.session.get(Job, job_id)
+    if not job:
+        return fail("职位不存在", http_status=404)
+    from app.services.weight_service import ACTION_WEIGHT
+    fb = UserFeedback(user_id=user_id, job_id=job_id,
+                      action=action, weight=ACTION_WEIGHT[action])
+    db.session.add(fb)
+    db.session.commit()
+    return ok(None, "已记录")
 
 
 @bp.get("/candidates")

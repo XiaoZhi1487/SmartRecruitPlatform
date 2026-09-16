@@ -16,6 +16,22 @@
       </div>
     </section>
 
+    <!-- 动态权重说明 -->
+    <section class="weight-card zp-card" v-if="weights">
+      <div class="hs-title">动态自适应权重（行为反馈学习）</div>
+      <div class="w-row">
+        <span v-for="d in dimList" :key="d.k" class="w-item">
+          {{ d.label }}
+          <el-tag size="small" class="w-tag" :class="{ hot: !d.personal }">{{ d.v }}%</el-tag>
+        </span>
+      </div>
+      <div class="w-note">
+        <el-icon><MagicStick /></el-icon>
+        权重由平台岗位数据区分度与你的浏览/详情/收藏/投递行为动态生成；
+        {{ weights.using_personal ? '已启用个性化调节。' : '当前为全局权重（行为数据积累后将转为个性化）。' }}
+      </div>
+    </section>
+
     <!-- 推荐列表 -->
     <div v-loading="loading" class="rec-list">
       <div v-for="item in items" :key="item.id" class="rec-card zp-card" @click="goDetail(item)">
@@ -55,8 +71,18 @@ const router = useRouter()
 const items = ref([])
 const overview = ref(null)
 const loading = ref(false)
+const weights = ref(null)
 
 const dimLabel = { skill: '技能', salary: '薪资', location: '地点', experience: '经验', education: '学历' }
+const dimList = [
+  { k: 'skill', label: '技能', v: 0 }, { k: 'salary', label: '薪资', v: 0 },
+  { k: 'location', label: '地点', v: 0 }, { k: 'experience', label: '经验', v: 0 },
+  { k: 'education', label: '学历', v: 0 },
+]
+
+function trackFeedback(item, action) {
+  recommendApi.feedback({ job_id: item.id, action }).catch(() => {})
+}
 
 onMounted(async () => {
   loading.value = true
@@ -64,12 +90,18 @@ onMounted(async () => {
     const [rec, ov] = await Promise.all([recommendApi.jobs({ limit: 15 }), recommendApi.overview()])
     items.value = rec.items
     overview.value = ov
+    if (rec.weights) {
+      const w = rec.weights.weights
+      dimList.forEach(d => { d.v = Math.round(w[d.k] * 100) })
+      weights.value = rec.weights
+    }
   } finally {
     loading.value = false
   }
 })
 
 function goDetail(item) {
+  trackFeedback(item, 'view')
   router.push(`/job/${item.id}`)
 }
 </script>
@@ -92,6 +124,35 @@ function goDetail(item) {
   font-weight: 700;
   font-size: 14px;
   margin-bottom: 10px;
+}
+.weight-card {
+  padding: 16px 20px;
+  margin-bottom: 14px;
+}
+.w-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.w-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--zp-text-secondary);
+}
+.w-tag.hot {
+  background: #f59e0b;
+  border-color: #f59e0b;
+  color: #fff;
+}
+.w-note {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #64748b;
 }
 .hs-tags {
   display: flex;

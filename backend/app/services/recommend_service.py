@@ -10,14 +10,15 @@ from app.models.job import Job
 from app.models.user import User
 from app.models.profile import UserProfile, Skill
 
-# 权重配置
-WEIGHTS = {
+# 权重配置（作为冷启动默认值；实际推荐使用 weight_service 动态权重）
+DEFAULT_WEIGHTS = {
     "skill": 0.40,
     "salary": 0.20,
     "location": 0.15,
     "experience": 0.15,
     "education": 0.10,
 }
+WEIGHTS = DEFAULT_WEIGHTS
 
 EDUCATION_RANK = {"高中": 1, "大专": 2, "本科": 3, "硕士": 4, "博士": 5}
 EXPERIENCE_YEARS = {"在校/应届": 0, "1年以内": 1, "1-3年": 2, "3-5年": 4, "5-10年": 7, "10年以上": 10}
@@ -127,8 +128,9 @@ def _education_score(job, ctx) -> float:
     return max(0.2, 0.8 + diff * 0.2)
 
 
-def score_job(job, ctx) -> dict:
-    """计算单职位综合评分与维度明细"""
+def score_job(job, ctx, weights=None) -> dict:
+    """计算单职位综合评分与维度明细。weights 为动态权重，缺省用默认权重。"""
+    weights = weights or WEIGHTS
     scores = {
         "skill": _skill_score(job, ctx),
         "salary": _salary_score(job, ctx),
@@ -136,20 +138,26 @@ def score_job(job, ctx) -> dict:
         "experience": _experience_score(job, ctx),
         "education": _education_score(job, ctx),
     }
-    total = sum(scores[k] * WEIGHTS[k] for k in WEIGHTS)
+    total = sum(scores[k] * weights[k] for k in weights)
     return {"total": round(total * 100, 1), "dimensions": scores}
 
 
-def recommend_jobs_for_user(user_id, limit=10, exclude_ids=None) -> list:
-    """为用户推荐岗位，返回带评分与原因的列表"""
+def recommend_jobs_for_user(user_id, limit=10, exclude_ids=None):
+    """为用户推荐岗位，返回带评分、原因与动态权重信息的列表"""
     ctx = get_user_context(user_id)
     query = Job.query.filter_by(is_active=True)
     if exclude_ids:
         query = query.filter(~Job.id.in_(exclude_ids))
     jobs = query.order_by(Job.created_at.desc()).limit(500).all()
+
+    # 动态权重（三层：全局区分度 + 用户行为个性化融合）
+    from app.services.weight_service import get_dynamic_weights
+    dyn = get_dynamic_weights(user_id, ctx, jobs)
+    weights = dyn["weights"]
+
     scored = []
     for job in jobs:
-        s = score_job(job, ctx)
+        s = score_job(job, ctx, weights)
         if s["total"] >= 20:
             scored.append((s["total"], job, s["dimensions"]))
     scored.sort(key=lambda x: x[0], reverse=True)
@@ -160,7 +168,7 @@ def recommend_jobs_for_user(user_id, limit=10, exclude_ids=None) -> list:
         d["dimensions"] = {k: round(v * 100) for k, v in dims.items()}
         d["reason"] = _reason_text(job, ctx, dims)
         result.append(d)
-    return result
+    return result, dyn
 
 
 def match_candidates_for_job(job_id, limit=20) -> list:

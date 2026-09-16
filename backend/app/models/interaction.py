@@ -18,6 +18,21 @@ class FavoriteJob(db.Model):
     __table_args__ = (db.UniqueConstraint("user_id", "job_id", name="uq_user_job"),)
 
 
+class UserFeedback(db.Model):
+    """用户行为反馈（用于个性化推荐权重调节）"""
+    __tablename__ = "user_feedbacks"
+
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False, index=True)
+    job_id = db.Column(db.Integer, db.ForeignKey("jobs.id"), nullable=False, index=True)
+    action = db.Column(db.String(16), nullable=False, index=True)   # browse / view / favorite / apply
+    weight = db.Column(db.Float, nullable=False, default=1.0)       # 行为权重
+    created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+
+    user = db.relationship("User")
+    job = db.relationship("Job", back_populates="feedbacks")
+
+
 class ChatSession(db.Model):
     __tablename__ = "chat_sessions"
 

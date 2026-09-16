@@ -112,10 +112,6 @@ class Config:
         "company_name": ".cname, .tCompany_main h1, .c_info .cname",
     }
     CRAWL_STRUCTURE_CHECK_URL = "https://we.51job.com/pc/search?jobArea=000000&keyword=Python&searchType=2&pageNum=1"
-    # 定时爬取关键字（每6小时任务，指定具体城市爬取，不做全国）
-    CRAWL_SCHEDULE_KEYWORDS = ["Python", "Java", "前端", "数据分析"]
-    CRAWL_SCHEDULE_CITY = "柳州"
-    CRAWL_SCHEDULE_PAGES = 3
 
     # ---------- 分页 ----------
     DEFAULT_PAGE_SIZE = 10

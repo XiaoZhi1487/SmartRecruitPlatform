@@ -5,11 +5,12 @@ from app.models.job import Company, Job
 from app.models.resume import Resume
 from app.models.interaction import (
     FavoriteJob, ChatSession, ChatMessage, CrawlTask, CrawlLog, SiteStructureCheck,
+    UserFeedback,
 )
 
 __all__ = [
     "User", "UserProfile", "Education", "WorkExperience", "Skill",
     "Company", "Job", "Resume",
     "FavoriteJob", "ChatSession", "ChatMessage",
-    "CrawlTask", "CrawlLog", "SiteStructureCheck",
+    "CrawlTask", "CrawlLog", "SiteStructureCheck", "UserFeedback",
 ]

@@ -58,6 +58,8 @@ class Job(db.Model):
     company = db.relationship("Company", back_populates="jobs")
     favorites = db.relationship("FavoriteJob", back_populates="job",
                                 cascade="all, delete-orphan")
+    feedbacks = db.relationship("UserFeedback", back_populates="job",
+                                cascade="all, delete-orphan")
 
     def to_dict(self, brief=False):
         data = {

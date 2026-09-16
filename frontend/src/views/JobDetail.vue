@@ -98,7 +98,7 @@
 import { onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
-import { jobApi } from '../api'
+import { jobApi, recommendApi } from '../api'
 import { useUserStore } from '../stores/user'
 
 const route = useRoute()
@@ -113,6 +113,10 @@ onMounted(async () => {
   loading.value = true
   try {
     job.value = await jobApi.detail(route.params.id)
+    // 记录“详情查看”行为，用于个性化推荐权重学习
+    if (store.isLoggedIn && job.value) {
+      recommendApi.feedback({ job_id: job.value.id, action: 'view' }).catch(() => {})
+    }
     // 若有登录且未收藏，尝试AI分析（可选）
   } finally {
     loading.value = false
@@ -130,6 +134,7 @@ async function toggleFavorite() {
   } else {
     await jobApi.favorite(job.value.id)
     job.value.is_favorite = true
+    recommendApi.feedback({ job_id: job.value.id, action: 'favorite' }).catch(() => {})
   }
 }
 

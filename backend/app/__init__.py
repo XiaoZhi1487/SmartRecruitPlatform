@@ -57,10 +57,6 @@ def create_app(config_class=Config):
         _seed_admin(app)
         _seed_demo_jobs(app)
 
-    # 定时任务（测试环境跳过）
-    if not app.config.get("TESTING"):
-        _start_scheduler(app)
-
     logger.info("智聘通后端启动完成")
     return app
 
@@ -177,30 +173,3 @@ def _seed_save(items):
     db.session.commit()
     return saved
 
-
-# ---------------- 定时爬取 ----------------
-def _start_scheduler(app):
-    from app.extensions import scheduler
-
-    def auto_crawl_job():
-        from app.services.crawler import crawl_manager
-        if crawl_manager.running:
-            return
-        cfg = app.config
-        try:
-            crawl_manager.start(
-                keywords=cfg["CRAWL_SCHEDULE_KEYWORDS"],
-                city=cfg["CRAWL_SCHEDULE_CITY"],
-                pages=cfg["CRAWL_SCHEDULE_PAGES"],
-                threads=min(cfg["CRAWL_THREADS"], 2),
-                mode=cfg["CRAWL_MODE"],
-            )
-        except Exception as e:
-            get_logger().error("定时爬取任务启动失败: %s", e)
-
-    if not scheduler.running:
-        scheduler.start()
-    if not scheduler.get_job("auto_crawl"):
-        scheduler.add_job(auto_crawl_job, "interval", hours=6, id="auto_crawl",
-                          replace_existing=True)
-    get_logger().info("定时爬取任务已注册（每6小时）")

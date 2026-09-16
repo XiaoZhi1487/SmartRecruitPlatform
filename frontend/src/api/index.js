@@ -75,7 +75,8 @@ export const chatApi = {
 export const recommendApi = {
   jobs: params => request.get('/recommend/jobs', { params }),
   candidates: params => request.get('/recommend/candidates', { params }),
-  overview: () => request.get('/recommend/overview')
+  overview: () => request.get('/recommend/overview'),
+  feedback: data => request.post('/recommend/feedback', data)
 }
 
 // ============ 管理后台 ============
