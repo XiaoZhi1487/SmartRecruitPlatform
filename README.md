@@ -2,6 +2,32 @@
 
 基于 **前程无忧(51job)数据爬取 + AI智能分析** 的一站式求职招聘平台。系统通过 Selenium 多线程爬取招聘数据，结合 DeepSeek 大模型提供岗位推荐、简历优化、AI 职业助手等能力，覆盖求职者、企业、管理员三种角色。
 
+## 界面预览
+
+### 求职端
+
+| 登录 / 注册 | 职位大厅 |
+| :---: | :---: |
+| ![登录页](docs/screenshots/登录页.png) | ![职位大厅](docs/screenshots/职位大厅.png) |
+
+| 智能推荐 | AI 职业助手 |
+| :---: | :---: |
+| ![智能推荐](docs/screenshots/智能推荐.png) | ![AI职业助手](docs/screenshots/AI职业助手.png) |
+
+| 市场分析 | 我的收藏 |
+| :---: | :---: |
+| ![市场分析](docs/screenshots/市场分析.png) | ![我的收藏](docs/screenshots/我的收藏.png) |
+
+| 我的简历 | 个人中心 |
+| :---: | :---: |
+| ![我的简历](docs/screenshots/我的简历.png) | ![个人中心](docs/screenshots/个人中心.png) |
+
+### 管理端
+
+| 爬虫控制台 | 管理后台 |
+| :---: | :---: |
+| ![爬虫控制台](docs/screenshots/爬虫控制台.png) | ![管理后台](docs/screenshots/管理后台.png) |
+
 ## 功能模块
 
 | 模块 | 说明 |
