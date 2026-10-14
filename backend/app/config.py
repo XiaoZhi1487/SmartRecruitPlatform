@@ -5,6 +5,25 @@ from datetime import timedelta
 BASE_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 
+def _load_local_env():
+    """读取 backend/.env 中的键值对（仅本地密钥，已被 .gitignore 忽略，不提交 GitHub）。"""
+    env_path = os.path.join(BASE_DIR, ".env")
+    if not os.path.exists(env_path):
+        return {}
+    data = {}
+    with open(env_path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, value = line.partition("=")
+            data[key.strip()] = value.strip().strip('"').strip("'")
+    return data
+
+
+_LOCAL_ENV = _load_local_env()
+
+
 class Config:
     """应用基础配置"""
     # ---------- 安全 ----------
@@ -33,7 +52,7 @@ class Config:
     ALLOWED_RESUME_EXT = {".pdf", ".doc", ".docx", ".txt"}
 
     # ---------- DeepSeek AI ----------
-    DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
+    DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY") or _LOCAL_ENV.get("DEEPSEEK_API_KEY", "")
     DEEPSEEK_API_BASE = "https://api.deepseek.com"
     DEEPSEEK_MODEL = "deepseek-chat"
     AI_TIMEOUT = 60
