@@ -11,9 +11,7 @@ venv/
 backend/instance/
 backend/uploads/
 backend/logs/
-backend/drivers/*.exe
-backend/drivers/*.zip
-backend/drivers/edge_profile/
+backend/drivers/
 
 # ===== Node / 前端 =====
 frontend/node_modules/
@@ -34,3 +32,11 @@ Thumbs.db
 # ===== 测试报告 =====
 htmlcov/
 coverage.xml
+
+# ===== 答辩材料 / 密钥（不上传 GitHub）=====
+*.pptx
+*.pdf
+*.zip
+答辩文档/
+答辩PPT/
+scripts/gen_defense_*.py

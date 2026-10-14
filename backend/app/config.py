@@ -33,7 +33,7 @@ class Config:
     ALLOWED_RESUME_EXT = {".pdf", ".doc", ".docx", ".txt"}
 
     # ---------- DeepSeek AI ----------
-    DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "***REDACTED***")
+    DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
     DEEPSEEK_API_BASE = "https://api.deepseek.com"
     DEEPSEEK_MODEL = "deepseek-chat"
     AI_TIMEOUT = 60

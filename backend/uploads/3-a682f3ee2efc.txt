@@ -1,3 +1,0 @@
-王五 硕士 13712345678 wang@test.com
-技能：Python Flask MySQL Linux
-2020-2024 某科技有限公司 后端开发工程师
